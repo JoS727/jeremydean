@@ -191,6 +191,19 @@ input, select, textarea {
 textarea { resize: vertical; }
 input::placeholder, textarea::placeholder { color: rgba(244,239,233,0.46); }
 .form-note { margin: 0; font-size: 0.9rem; }
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.24);
+}
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.site-footer__inner a { color: var(--text); }
 
 @media (max-width: 900px) {
   .split-layout,
@@ -211,5 +224,10 @@ input::placeholder, textarea::placeholder { color: rgba(244,239,233,0.46); }
 
   .hero__content {
     padding-top: 6rem;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
