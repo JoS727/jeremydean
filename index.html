@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremy Dean | Live Music & Guest List</title>
+    <meta
+      name="description"
+      content="Jeremy Dean is a live musician bringing sunset-soaked energy, guitar-forward performance, and crowd-ready songs. Join the guest list and request tickets."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="#top">Jeremy Dean</a>
+          <nav class="site-nav">
+            <a href="#about">About</a>
+            <a href="#shows">Tickets</a>
+            <a href="#guest-list">Guest List</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero__backdrop">
+            <img src="assets/jeremy-dean-live-wide.jpg" alt="Jeremy Dean performing live onstage with sunset visuals behind him." />
+          </div>
+          <div class="container hero__content">
+            <span class="eyebrow">Live musician</span>
+            <h1>Jeremy Dean</h1>
+            <p class="hero__lede">
+              Guitar-forward live sets, big stage energy, and a warm sunset-drenched sound built for packed rooms, long nights, and people who actually came out to feel something.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#guest-list">Get on the guest list</a>
+              <a class="button button--ghost" href="#shows">Buy tickets</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="container split-layout">
+            <div>
+              <span class="eyebrow">Short bio</span>
+              <h2>Built for the stage first.</h2>
+              <p>
+                Jeremy Dean is a performing artist whose live show sits right in the sweet spot between polished musicianship and bar-lights-on, everybody-stays energy. The set feels modern, guitar-led, and crowd-friendly without losing personality.
+              </p>
+              <p>
+                Whether it is a headline room, a local showcase, or a summer-night crowd that needs something worth staying for, Jeremy brings the kind of live presence people remember after the night ends.
+              </p>
+            </div>
+            <div class="feature-card">
+              <img src="assets/jeremy-dean-live-detail.jpg" alt="Close-up live performance detail from Jeremy Dean on stage." />
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--accent" id="shows">
+          <div class="container split-layout split-layout--tight">
+            <div>
+              <span class="eyebrow eyebrow--light">Tickets</span>
+              <h2>Ticket requests that also build the guest list.</h2>
+              <p>
+                This page is set up so every ticket or guest-list submission goes straight to Jeremy’s team email. It works as a lightweight backend for now: names, party size, email, and notes all land in the inbox.
+              </p>
+              <ul class="ticket-points">
+                <li>One form for ticket interest + guest list</li>
+                <li>Names and party size sent directly by email</li>
+                <li>Simple enough to use now, easy to upgrade later</li>
+              </ul>
+            </div>
+            <div class="ticket-card">
+              <div class="ticket-card__label">Current flow</div>
+              <h3>Guest list + ticket request inbox</h3>
+              <p>Submissions route to <strong>support@jeremydealmusic.com</strong> so the list can be managed without waiting on a full ticketing platform.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="guest-list">
+          <div class="container form-layout">
+            <div>
+              <span class="eyebrow">Guest list request</span>
+              <h2>Get your name on the list.</h2>
+              <p class="section-copy">
+                Drop your details below. This sends a structured request directly to Jeremy Dean’s support inbox so the team can confirm tickets, guest list spots, or follow-up details.
+              </p>
+            </div>
+
+            <form
+              class="guest-form"
+              action="https://formsubmit.co/support@jeremydealmusic.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Jeremy Dean ticket / guest list request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://jeremydealmusic.com/?submitted=1#guest-list" />
+
+              <div class="field-grid">
+                <label>
+                  <span>Full name</span>
+                  <input type="text" name="name" placeholder="Your full name" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input type="tel" name="phone" placeholder="(555) 555-5555" />
+                </label>
+                <label>
+                  <span>Party size</span>
+                  <select name="party_size" required>
+                    <option value="">Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                <span>Event / city</span>
+                <input type="text" name="event" placeholder="Which show are you trying to attend?" />
+              </label>
+
+              <label>
+                <span>Notes</span>
+                <textarea name="notes" rows="5" placeholder="Any details Jeremy's team should know?"></textarea>
+              </label>
+
+              <button class="button button--primary button--full" type="submit">Submit request</button>
+              <p class="form-note">
+                After submit, the request is emailed to <strong>support@jeremydealmusic.com</strong>. This is the simple first-pass backend.
+              </p>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
