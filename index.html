@@ -94,20 +94,21 @@
           <div class="container split-layout split-layout--tight">
             <div>
               <span class="eyebrow">Tickets</span>
-              <h2>Ticket requests that also build the guest list.</h2>
+              <h2>Direct ticket sales for the shows.</h2>
               <p>
-                This page is set up so every ticket or guest-list submission goes straight to Jeremy’s team email. It works as a lightweight backend for now: names, party size, email, and notes all land in the inbox.
+                The clean short-term purchase path is direct: fans can pay <strong>$20</strong> through Jeremy Dean’s Venmo ticket QR, then submit their guest-list details so the team can match payment to names and party size.
               </p>
               <ul class="ticket-points">
-                <li>One form for ticket interest + guest list</li>
-                <li>Names and party size sent directly by email</li>
-                <li>Simple enough to use now, easy to upgrade later</li>
+                <li>$20 ticket payment via Venmo</li>
+                <li>Guest-list form captures names, party size, email, and notes</li>
+                <li>Support inbox still receives the show details for list management</li>
               </ul>
             </div>
-            <div class="ticket-card">
-              <div class="ticket-card__label">Current flow</div>
-              <h3>Guest list + ticket request inbox</h3>
-              <p>Submissions route to <strong>support@jeremydealmusic.com</strong> so the list can be managed without waiting on a full ticketing platform.</p>
+            <div class="ticket-card ticket-card--payment">
+              <div class="ticket-card__label">Pay now</div>
+              <h3>$20 ticket payment</h3>
+              <img src="assets/jeremy-dean-venmo-ticket.jpg" alt="Venmo QR code for $20 payment to Jeremy Dean (@jeremy_deanmusic)." class="ticket-card__qr" />
+              <p>Scan to pay <strong>$20</strong> to <strong>@jeremy_deanmusic</strong>, then fill out the guest-list form below so the team knows who to expect at the show.</p>
             </div>
           </div>
         </section>
@@ -118,7 +119,7 @@
               <span class="eyebrow">Guest list request</span>
               <h2>Get your name on the list.</h2>
               <p class="section-copy">
-                Drop your details below. This sends a structured request directly to Jeremy Dean’s support inbox so the team can confirm tickets, guest list spots, or follow-up details.
+                After payment, drop your details below. This sends a structured request directly to Jeremy Dean’s support inbox so the team can match payment, confirm names, and lock the guest list.
               </p>
             </div>
 
@@ -160,7 +161,7 @@
 
               <label>
                 <span>Event / city</span>
-                <input type="text" name="event" placeholder="Which show are you trying to attend?" />
+                <input type="text" name="event" placeholder="Which show are you paying for?" />
               </label>
 
               <label>
@@ -168,9 +169,9 @@
                 <textarea name="notes" rows="5" placeholder="Any details Jeremy's team should know?"></textarea>
               </label>
 
-              <button class="button button--primary button--full" type="submit">Submit request</button>
+              <button class="button button--primary button--full" type="submit">Submit paid ticket / guest list request</button>
               <p class="form-note">
-                After submit, the request is emailed to <strong>support@jeremydealmusic.com</strong>. This is the simple first-pass backend.
+                After submit, the request is emailed to <strong>support@jeremydealmusic.com</strong>. This is the simple first-pass ticket-sales and guest-list backend.
               </p>
             </form>
           </div>

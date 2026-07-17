@@ -182,6 +182,8 @@ a { color: inherit; text-decoration: none; }
 .ticket-card,
 .music-card,
 .guest-form { padding: 1.5rem; }
+.ticket-card--payment { display: grid; gap: 1rem; }
+.ticket-card__qr { width: min(100%, 320px); border: 1px solid rgba(20,17,15,0.1); background: #fff; padding: 0.5rem; }
 .ticket-card__label,
 .music-card__label {
   text-transform: uppercase;
