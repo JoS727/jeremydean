@@ -146,6 +146,7 @@ a { color: inherit; text-decoration: none; }
 .split-layout--tight { grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr); }
 .feature-card,
 .ticket-card,
+.music-card,
 .guest-form {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -153,13 +154,18 @@ a { color: inherit; text-decoration: none; }
 }
 .feature-card img { width: 100%; min-height: 420px; object-fit: cover; }
 .ticket-card,
+.music-card,
 .guest-form { padding: 1.5rem; }
-.ticket-card__label {
+.ticket-card__label,
+.music-card__label {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.7rem;
   color: var(--gold);
 }
+.music-card a { color: var(--text); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.25); }
+.music-actions { margin-top: 1.5rem; }
+.section--music { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); }
 .ticket-points { padding-left: 1.1rem; }
 .ticket-points li + li { margin-top: 0.6rem; }
 .guest-form { display: grid; gap: 1rem; }
