@@ -47,7 +47,7 @@ if (form) {
       form.reset();
       const eventField = form.querySelector('input[name="event"]');
       if (eventField) {
-        eventField.value = 'Jeremy Dean Unplugged — September 4, 2026 — Uppercuts Barber';
+        eventField.value = 'Jeremy Dean Unplugged — September 5, 2026 — Uppercuts Barber';
       }
       setStatus('You’re on the list. Payment details and guest info were sent to Jeremy’s team.', 'success');
     } catch (error) {
