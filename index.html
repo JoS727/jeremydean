@@ -25,7 +25,7 @@
           <nav class="site-nav">
             <a href="#show">Show</a>
             <a href="#tickets">Tickets & Guest List</a>
-            <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">SoundCloud</a>
+            <a href="#music">Music</a>
           </nav>
         </div>
       </header>
@@ -80,19 +80,14 @@
           <div class="container form-layout">
             <div>
               <span class="eyebrow">Tickets & guest list</span>
-              <h2>Pay the ticket, then lock the names.</h2>
-              <div class="ticket-card ticket-card--payment ticket-card--inline">
-                <div class="ticket-card__label">Step 1 · Pay $20</div>
-                <img src="assets/jeremy-dean-venmo-ticket.jpg" alt="Venmo QR code for $20 payment to Jeremy Dean (@jeremy_deanmusic)." class="ticket-card__qr" />
-                <p>
-                  Scan to pay <strong>$20</strong> to <strong>@jeremy_deanmusic</strong>. Then complete the form so the payment becomes the guest-list entry.
-                </p>
-                <a class="button button--primary" href="https://venmo.com/code?user_id=4643495570573157731&amp;created=1784322015.808404&amp;printed=1" target="_blank" rel="noreferrer">Open Venmo payment</a>
-              </div>
+              <h2>Put in your info, then pay.</h2>
+              <p class="section-copy">
+                Start with your guest-list details so Jeremy’s team knows who the payment belongs to. After you submit, use the payment link right below the form to send the <strong>$20</strong> ticket.
+              </p>
             </div>
 
             <form class="guest-form" id="guest-list-form">
-              <div class="ticket-card__label">Step 2 · Submit your paid entry</div>
+              <div class="ticket-card__label">Step 1 · Submit your info</div>
               <div class="field-grid">
                 <label>
                   <span>Full name</span>
@@ -134,11 +129,38 @@
                 <textarea name="notes" rows="5" placeholder="Anything Jeremy's team should know?"></textarea>
               </label>
 
-              <button class="button button--primary button--full" type="submit">Submit paid ticket / guest list request</button>
+              <button class="button button--primary button--full" type="submit">Submit guest list info</button>
+              <div class="ticket-card ticket-card--payment ticket-card--inline ticket-card--after-form">
+                <div class="ticket-card__label">Step 2 · Pay $20</div>
+                <img src="assets/jeremy-dean-venmo-ticket.jpg" alt="Venmo QR code for $20 payment to Jeremy Dean (@jeremy_deanmusic)." class="ticket-card__qr" />
+                <p>
+                  After you put in your info, pay <strong>$20</strong> to <strong>@jeremy_deanmusic</strong> to complete the ticket.
+                </p>
+                <a class="button button--primary" href="https://venmo.com/code?user_id=4643495570573157731&amp;created=1784322015.808404&amp;printed=1" target="_blank" rel="noreferrer">Open payment link</a>
+              </div>
               <p class="form-note" id="form-status">
                 This is ready for the free Google Sheet guest-list flow. Once the Apps Script web app is deployed, this form will write directly into the sheet and send the paid confirmation email.
               </p>
             </form>
+          </div>
+        </section>
+
+        <section class="section section--accent" id="music">
+          <div class="container split-layout split-layout--tight">
+            <div>
+              <span class="eyebrow">Music</span>
+              <h2>Listen before the show.</h2>
+              <p>
+                Want the sound before the room? Hit Jeremy Dean on SoundCloud for the records, the tone, and the full vibe behind the live set.
+              </p>
+              <a class="button button--primary" href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">Open Music</a>
+            </div>
+            <div class="music-card">
+              <div class="music-card__label">Jeremy Dean</div>
+              <h3>SoundCloud</h3>
+              <p>Stream Jeremy Dean and get the feel before Jeremy Dean Unplugged.</p>
+              <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">https://on.soundcloud.com/svPY4LJOPZWUl74EOf</a>
+            </div>
           </div>
         </section>
       </main>
