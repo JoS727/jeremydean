@@ -230,6 +230,10 @@ input, select, textarea {
 textarea { resize: vertical; }
 input::placeholder, textarea::placeholder { color: rgba(20,17,15,0.45); }
 .form-note { margin: 0; font-size: 0.9rem; }
+.form-note[data-state="info"] { color: #6d4d13; }
+.form-note[data-state="success"] { color: #2d5a16; }
+.form-note[data-state="warning"] { color: #8a3d2c; }
+.form-note[data-state="error"] { color: #9a1f16; }
 .site-footer {
   border-top: 1px solid rgba(20,17,15,0.08);
   background: rgba(243, 233, 210, 0.72);

@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="site.js"></script>
   </head>
   <body>
     <div class="page-shell">
@@ -90,16 +91,7 @@
               </div>
             </div>
 
-            <form
-              class="guest-form"
-              action="https://formsubmit.co/support@jeremydealmusic.com"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" value="Jeremy Dean paid ticket / guest list request" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://jeremydeanmusic.com/?submitted=1#tickets" />
-
+            <form class="guest-form" id="guest-list-form">
               <div class="ticket-card__label">Step 2 · Submit your paid entry</div>
               <div class="field-grid">
                 <label>
@@ -143,8 +135,8 @@
               </label>
 
               <button class="button button--primary button--full" type="submit">Submit paid ticket / guest list request</button>
-              <p class="form-note">
-                This sends the paid entry to <strong>support@jeremydealmusic.com</strong> so Jeremy’s team can match payment to the guest list.
+              <p class="form-note" id="form-status">
+                This is ready for the free Google Sheet guest-list flow. Once the Apps Script web app is deployed, this form will write directly into the sheet and send the paid confirmation email.
               </p>
             </form>
           </div>
