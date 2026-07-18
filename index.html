@@ -94,7 +94,12 @@
               </p>
             </div>
 
-            <form class="guest-form" id="guest-list-form">
+            <form class="guest-form" id="guest-list-form" action="https://formsubmit.co/support@jeremydealmusic.com" method="POST">
+              <input type="hidden" name="_subject" value="Jeremy Dean paid ticket / guest list request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_autoresponse" value="You're on the Jeremy Dean guest list request. We received your info and Jeremy's team will match it with your Venmo payment for the September 5 show at Uppercuts Barber." />
+              <input type="hidden" name="_next" value="https://jeremydeanmusic.com/?submitted=1#tickets" />
               <div class="ticket-card__label">Step 1 · Submit your info</div>
               <div class="field-grid">
                 <label>
@@ -147,7 +152,7 @@
                 <a class="button button--primary" href="https://venmo.com/code?user_id=4643495570573157731&amp;created=1784322015.808404&amp;printed=1" target="_blank" rel="noreferrer">Open payment link</a>
               </div>
               <p class="form-note" id="form-status">
-                This is ready for the free Google Sheet guest-list flow. Once the Apps Script web app is deployed, this form will write directly into the sheet and send the paid confirmation email.
+                After you submit, the request goes to <strong>support@jeremydealmusic.com</strong> and the guest should also receive an email confirmation.
               </p>
             </form>
           </div>
