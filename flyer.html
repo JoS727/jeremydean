@@ -100,6 +100,69 @@
         </div>
       </section>
 
+      <section class="flyer-ticket-section" id="tickets">
+        <div class="flyer-ticket-intro">
+          <p class="flyer-label">Tickets + guest list</p>
+          <h2>The full flow lives here now.</h2>
+          <p>Since this is becoming the main ticket page, the guest-list form and payment step now live directly on the flyer page.</p>
+        </div>
+
+        <form class="flyer-form" id="guest-list-form" action="https://formsubmit.co/souzajeremy594@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Jeremy Dean paid ticket / guest list request" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_autoresponse" value="You're on the Jeremy Dean guest list request. We received your info and Jeremy's team will match it with your Venmo payment for the September 5 show at Uppercuts Barber." />
+          <input type="hidden" name="_next" value="https://jeremydeanmusic.com/flyer.html?submitted=1#tickets" />
+          <div class="flyer-form__label">Step 1 · Submit your info</div>
+          <div class="flyer-form__grid">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input type="tel" name="phone" placeholder="(555) 555-5555" />
+            </label>
+            <label>
+              <span>Party size</span>
+              <select name="party_size" required>
+                <option value="">Select</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Event</span>
+            <input type="text" name="event" value="Jeremy Dean Unplugged — September 5, 2026 — Uppercuts Barber" />
+          </label>
+          <label>
+            <span>Venmo name or payment note</span>
+            <input type="text" name="payment_reference" placeholder="Name used on Venmo or payment note" required />
+          </label>
+          <label>
+            <span>Notes</span>
+            <textarea name="notes" rows="5" placeholder="Anything Jeremy's team should know?"></textarea>
+          </label>
+          <button class="flyer-button flyer-button--primary flyer-button--full" type="submit">Submit guest list info</button>
+          <p class="flyer-form-note" id="form-status">After you submit, the request goes to <strong>souzajeremy594@gmail.com</strong> and the guest should also receive an email confirmation.</p>
+        </form>
+
+        <div class="flyer-payment-card">
+          <div class="flyer-form__label">Step 2 · Pay $20</div>
+          <img src="assets/jeremy-dean-venmo-ticket.jpg" alt="Venmo QR code for $20 payment to Jeremy Dean (@jeremy_deanmusic)." class="flyer-payment-card__qr" />
+          <p>After you put in your info, pay <strong>$20</strong> to <strong>@jeremy_deanmusic</strong> to complete the ticket.</p>
+          <a class="flyer-button flyer-button--primary flyer-button--full" href="https://venmo.com/code?user_id=4643495570573157731&amp;created=1784322015.808404&amp;printed=1" target="_blank" rel="noreferrer">Open payment link</a>
+        </div>
+      </section>
+
       <section class="flyer-guest-band">
         <div class="flyer-guest-band__image">
           <img src="assets/coastal-creature-guest-card.jpg" alt="Coastal Creature guest promo art with the note Come early grab a seat." />
