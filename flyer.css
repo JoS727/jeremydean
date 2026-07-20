@@ -147,6 +147,28 @@ h2 {
   margin-top: 1.5rem;
 }
 
+.flyer-guest-band {
+  display: grid;
+  grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.flyer-guest-band__image img {
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.flyer-guest-band__copy {
+  padding: 1.5rem;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(27, 15, 23, 0.95), rgba(19, 13, 16, 0.94));
+}
+
 .flyer-copy ul {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
@@ -159,7 +181,8 @@ h2 {
 @media (max-width: 900px) {
   .flyer-hero,
   .flyer-grid,
-  .flyer-details {
+  .flyer-details,
+  .flyer-guest-band {
     grid-template-columns: 1fr;
   }
 
