@@ -171,6 +171,36 @@ h2 {
   line-height: 1.8;
 }
 
+.flyer-lineup {
+  margin: 1rem 0 0.75rem;
+  padding-left: 0.1rem;
+}
+
+.flyer-lineup__label {
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--purple-soft);
+  font-weight: 800;
+}
+
+.flyer-lineup__headliner {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+  line-height: 0.92;
+  color: var(--gold-soft);
+}
+
+.flyer-lineup__support {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(242, 223, 194, 0.84);
+}
+
 .flyer-cta-row {
   display: flex;
   gap: 1rem;
@@ -207,6 +237,12 @@ h2 {
 
 .flyer-grid--posterish .flyer-panel--highlight {
   background: linear-gradient(180deg, rgba(92, 45, 136, 0.34), rgba(19, 13, 16, 0.94));
+}
+
+.flyer-panel__support {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .flyer-panel--ghosted {
@@ -248,6 +284,10 @@ h2 {
   background: linear-gradient(180deg, rgba(27, 15, 23, 0.95), rgba(19, 13, 16, 0.94));
 }
 
+.flyer-guest-band__copy--accent {
+  background: linear-gradient(180deg, rgba(92, 45, 136, 0.26), rgba(19, 13, 16, 0.94));
+}
+
 .flyer-copy ul {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
@@ -284,5 +324,9 @@ h2 {
 
   .flyer-ticket-badge {
     width: 100%;
+  }
+
+  .flyer-lineup__support {
+    letter-spacing: 0.04em;
   }
 }
