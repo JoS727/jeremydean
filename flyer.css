@@ -52,6 +52,10 @@ a { color: inherit; text-decoration: none; }
   align-items: stretch;
 }
 
+.flyer-hero__art {
+  position: relative;
+}
+
 .flyer-hero__art img,
 .flyer-actions-card,
 .flyer-panel,
@@ -63,6 +67,18 @@ a { color: inherit; text-decoration: none; }
 .flyer-hero__art img {
   border-radius: 22px;
   overflow: hidden;
+}
+
+.flyer-hero__art--stacked {
+  display: grid;
+  gap: 1rem;
+}
+
+.flyer-hero__insert {
+  max-width: 280px;
+  margin-left: auto;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 .flyer-hero__content,
@@ -169,6 +185,40 @@ h2 {
 .flyer-actions-card p {
   color: var(--muted);
   line-height: 1.8;
+}
+
+.flyer-flow-banner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 0.75rem;
+}
+
+.flyer-flow-banner div {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(201, 155, 88, 0.18), rgba(92, 45, 136, 0.18));
+}
+
+.flyer-flow-banner span {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: #1a0f0d;
+  font-weight: 800;
+}
+
+.flyer-flow-banner strong {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.84rem;
 }
 
 .flyer-lineup {
@@ -342,6 +392,10 @@ h2 {
   .flyer-grid,
   .flyer-details,
   .flyer-guest-band {
+    grid-template-columns: 1fr;
+  }
+
+  .flyer-flow-banner {
     grid-template-columns: 1fr;
   }
 
