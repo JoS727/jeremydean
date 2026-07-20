@@ -269,6 +269,21 @@ h2 {
   letter-spacing: 0.08em;
 }
 
+.flyer-flow-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.flyer-flow-list li + li {
+  margin-top: 0.6rem;
+}
+
+.flyer-panel--flow {
+  display: grid;
+  gap: 0.8rem;
+}
+
 .flyer-panel--ghosted {
   background: linear-gradient(180deg, rgba(201, 155, 88, 0.16), rgba(19, 13, 16, 0.94));
 }
