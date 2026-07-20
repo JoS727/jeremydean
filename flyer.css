@@ -38,6 +38,10 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
 }
 
+.flyer-hero--posterish {
+  align-items: stretch;
+}
+
 .flyer-hero__art img,
 .flyer-actions-card,
 .flyer-panel,
@@ -61,6 +65,9 @@ a { color: inherit; text-decoration: none; }
 
 .flyer-hero__content {
   padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flyer-kicker,
@@ -84,6 +91,34 @@ h1, h2 {
 h1 {
   font-size: clamp(3.5rem, 8vw, 7rem);
   color: var(--gold-soft);
+}
+
+.flyer-poster-strips {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.flyer-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(92, 45, 136, 0.22), rgba(201, 155, 88, 0.12));
+}
+
+.flyer-strip span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  color: var(--purple-soft);
+  font-weight: 800;
+}
+
+.flyer-strip strong {
+  color: var(--text);
 }
 
 h2 {
@@ -132,6 +167,10 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
+}
+
+.flyer-grid--posterish .flyer-panel--highlight {
+  background: linear-gradient(180deg, rgba(92, 45, 136, 0.34), rgba(19, 13, 16, 0.94));
 }
 
 .flyer-panel,
@@ -184,6 +223,11 @@ h2 {
   .flyer-details,
   .flyer-guest-band {
     grid-template-columns: 1fr;
+  }
+
+  .flyer-strip {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .flyer-page {
