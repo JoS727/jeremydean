@@ -70,12 +70,12 @@
           </div>
           <div class="container hero__content">
             <span class="eyebrow eyebrow--hero">Jeremy Dean Unplugged</span>
-            <h1>RSVP by email for the September 5 show.</h1>
+            <h1>Tickets + guest list for the September 5 show.</h1>
             <p class="hero__lede">
-              Jeremy Dean is a singer, songwriter, and producer from Oakland, now based in San Diego, blending R&amp;B and reggae with soulful vocals and emotive lyrics. This page is dialed in for one job: get people to email Jeremy directly for the show.
+              Jeremy Dean is a singer, songwriter, and producer from Oakland, now based in San Diego, blending R&amp;B and reggae with soulful vocals and emotive lyrics. This page is dialed in for one job: get people paid and on the list for the show.
             </p>
             <div class="hero__actions">
-              <a class="button button--primary" href="mailto:souzajeremy594@gmail.com?subject=Jeremy%20Dean%20Unplugged%20RSVP">RSVP by email</a>
+              <a class="button button--primary" href="#tickets">Pay + join the list</a>
               <a class="button button--ghost" href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">Listen on SoundCloud</a>
             </div>
           </div>
@@ -96,7 +96,7 @@
                 <li><strong>$20</strong> per person · includes food and drink</li>
               </ul>
               <p>
-                Email Jeremy directly with your name, party size, and any notes for the September 5 show.
+                Pay first with Venmo, then submit the same name and party details below so Jeremy’s team can match payment to the guest list.
               </p>
               <div class="special-guests-card">
               <div class="ticket-card__label">Special guests</div>
@@ -113,23 +113,74 @@
         <section class="section" id="tickets">
           <div class="container form-layout">
             <div>
-              <span class="eyebrow">RSVP</span>
-              <h2>Email Jeremy directly.</h2>
+              <span class="eyebrow">Tickets & guest list</span>
+              <h2>Put in your info, then pay.</h2>
               <p class="section-copy">
-                Skip the form. Send your name, party size, and any notes straight to Jeremy and he’ll handle the guest list by email.
+                Start with your guest-list details so Jeremy’s team knows who the payment belongs to. After you submit, use the payment link right below the form to send the <strong>$20</strong> ticket.
               </p>
             </div>
 
-            <div class="guest-form guest-form--mailto">
-              <div class="ticket-card__label">Email RSVP</div>
-              <p>
-                Contact Jeremy directly at <strong>souzajeremy594@gmail.com</strong> with your full name, party size, and any notes for the show.
-              </p>
-              <a class="button button--primary button--full" href="mailto:souzajeremy594@gmail.com?subject=Jeremy%20Dean%20Unplugged%20RSVP">Email souzajeremy594@gmail.com</a>
+            <form class="guest-form" id="guest-list-form" action="https://formsubmit.co/support@jeremydealmusic.com" method="POST">
+              <input type="hidden" name="_subject" value="Jeremy Dean paid ticket / guest list request" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_autoresponse" value="You're on the Jeremy Dean guest list request. We received your info and Jeremy's team will match it with your Venmo payment for the September 5 show at Uppercuts Barber." />
+              <input type="hidden" name="_next" value="https://jeremydeanmusic.com/?submitted=1#tickets" />
+              <div class="ticket-card__label">Step 1 · Submit your info</div>
+              <div class="field-grid">
+                <label>
+                  <span>Full name</span>
+                  <input type="text" name="name" placeholder="Your full name" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input type="tel" name="phone" placeholder="(555) 555-5555" />
+                </label>
+                <label>
+                  <span>Party size</span>
+                  <select name="party_size" required>
+                    <option value="">Select</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                <span>Event</span>
+                <input type="text" name="event" value="Jeremy Dean Unplugged — September 5, 2026 — Uppercuts Barber" />
+              </label>
+
+              <label>
+                <span>Venmo name or payment note</span>
+                <input type="text" name="payment_reference" placeholder="Name used on Venmo or payment note" required />
+              </label>
+
+              <label>
+                <span>Notes</span>
+                <textarea name="notes" rows="5" placeholder="Anything Jeremy's team should know?"></textarea>
+              </label>
+
+              <button class="button button--primary button--full" type="submit">Submit guest list info</button>
+              <div class="ticket-card ticket-card--payment ticket-card--inline ticket-card--after-form">
+                <div class="ticket-card__label">Step 2 · Pay $20</div>
+                <img src="assets/jeremy-dean-venmo-ticket.jpg" alt="Venmo QR code for $20 payment to Jeremy Dean (@jeremy_deanmusic)." class="ticket-card__qr" />
+                <p>
+                  After you put in your info, pay <strong>$20</strong> to <strong>@jeremy_deanmusic</strong> to complete the ticket.
+                </p>
+                <a class="button button--primary" href="https://venmo.com/code?user_id=4643495570573157731&amp;created=1784322015.808404&amp;printed=1" target="_blank" rel="noreferrer">Open payment link</a>
+              </div>
               <p class="form-note" id="form-status">
-                RSVP requests now go directly to <strong>souzajeremy594@gmail.com</strong>.
+                After you submit, the request goes to <strong>support@jeremydealmusic.com</strong> and the guest should also receive an email confirmation.
               </p>
-            </div>
+            </form>
           </div>
         </section>
 
