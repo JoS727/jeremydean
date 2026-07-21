@@ -57,25 +57,31 @@ a { color: inherit; text-decoration: none; }
     min-height: 100vh;
     grid-template-columns: 1fr;
     gap: 0;
+    position: relative;
+    align-items: stretch;
   }
 
   .flyer-hero__art {
+    position: absolute;
+    inset: 0;
     order: 1;
   }
 
   .flyer-hero__art img {
     width: 100%;
     min-height: 100vh;
+    height: 100%;
     object-fit: cover;
     object-position: center top;
-    border-radius: 22px 22px 0 0;
+    border-radius: 0;
   }
 
   .flyer-hero__content {
     order: 2;
-    align-self: start;
-    max-width: 520px;
-    margin: -7rem 0 0 3rem;
+    align-self: center;
+    max-width: 640px;
+    width: min(640px, calc(100% - 4rem));
+    margin: 0 0 0 3rem;
     position: relative;
     z-index: 2;
   }
