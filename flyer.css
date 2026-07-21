@@ -71,9 +71,10 @@ a { color: inherit; text-decoration: none; }
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center top;
     border-radius: 0;
+    background: #140d12;
   }
 
   .flyer-hero__content {
