@@ -439,6 +439,19 @@ h2 {
   background: linear-gradient(180deg, rgba(201, 155, 88, 0.16), rgba(19, 13, 16, 0.94));
 }
 
+.flyer-panel--guest-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.flyer-panel__image {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 .flyer-panel,
 .flyer-copy,
 .flyer-actions-card {
