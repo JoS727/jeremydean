@@ -54,11 +54,16 @@ a { color: inherit; text-decoration: none; }
 
 @media (min-width: 901px) {
   .flyer-hero {
-    grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+    min-height: 100vh;
+    grid-template-columns: minmax(360px, 440px) minmax(0, 1fr);
+    gap: 2.5rem;
   }
 
   .flyer-hero__content {
     order: 1;
+    align-self: center;
+    margin-left: 0;
+    max-width: 440px;
   }
 
   .flyer-hero__art {
@@ -66,7 +71,8 @@ a { color: inherit; text-decoration: none; }
   }
 
   .flyer-hero__art img {
-    min-height: 860px;
+    width: 100%;
+    min-height: 92vh;
     object-fit: cover;
     object-position: center top;
   }
@@ -531,6 +537,15 @@ h2 {
   margin-top: 1.5rem;
   padding: 1rem 0 0.25rem;
   text-align: center;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.flyer-footer__label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
 }
 
 .flyer-footer a {
