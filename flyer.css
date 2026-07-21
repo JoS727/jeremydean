@@ -43,13 +43,33 @@ a { color: inherit; text-decoration: none; }
 
 .flyer-hero {
   display: grid;
-  grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
+  grid-template-columns: minmax(360px, 430px) minmax(0, 1fr);
   gap: 2rem;
   align-items: center;
 }
 
 .flyer-hero--posterish {
   align-items: stretch;
+}
+
+@media (min-width: 901px) {
+  .flyer-hero {
+    grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  }
+
+  .flyer-hero__content {
+    order: 1;
+  }
+
+  .flyer-hero__art {
+    order: 2;
+  }
+
+  .flyer-hero__art img {
+    min-height: 860px;
+    object-fit: cover;
+    object-position: center top;
+  }
 }
 
 .flyer-hero__art {
