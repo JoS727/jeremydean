@@ -365,6 +365,13 @@ h2 {
   align-content: start;
 }
 
+.flyer-payment-card__poster {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 .flyer-payment-card__qr {
   width: min(100%, 320px);
   background: #fff;
