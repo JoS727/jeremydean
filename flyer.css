@@ -555,6 +555,18 @@ h2 {
   font-size: 0.78rem;
 }
 
+.flyer-footer__sponsor-link {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.flyer-footer__sponsor-image {
+  width: min(100%, 320px);
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
 .flyer-copy ul {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
