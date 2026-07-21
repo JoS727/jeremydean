@@ -72,7 +72,7 @@ a { color: inherit; text-decoration: none; }
 
   .flyer-hero__art img {
     width: 100%;
-    min-height: 92vh;
+    min-height: 100vh;
     object-fit: cover;
     object-position: center top;
   }
