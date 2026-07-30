@@ -585,6 +585,11 @@ h2 {
   box-shadow: var(--shadow);
 }
 
+.flyer-footer__sponsor-image--calitoy {
+  width: min(100%, 220px);
+  border-radius: 14px;
+}
+
 .flyer-copy ul {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
