@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeremy Dean Merch | Official</title>
+<meta name="description" content="Official Jeremy Dean merchandise. Shirts, hoodies, totes, and more. Designed by Jeremy Dean. Printed and shipped on demand." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Jeremy Dean Merch | Official" />
+<meta property="og:description" content="Official Jeremy Dean merchandise. Printed and shipped on demand." />
+<meta property="og:url" content="https://jeremydeanmusic.com/merch.html" />
+<meta property="og:image" content="https://jeremydeanmusic.com/assets/jeremy-dean-merch-logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --paper: #f3e9d2;
+  --sand: #e8d7b8;
+  --ink: #14110f;
+  --sunset-red: #e75a45;
+  --sunset-orange: #f3a64d;
+  --sunset-yellow: #f6ca59;
+  --horizon-green: #b5c95d;
+  --panel: rgba(243, 233, 210, 0.78);
+  --panel-strong: rgba(243, 233, 210, 0.9);
+  --muted: rgba(20, 17, 15, 0.72);
+  --line: rgba(20, 17, 15, 0.12);
+  --shadow: 0 24px 80px rgba(20, 17, 15, 0.14);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, rgba(231, 90, 69, 0.15), transparent 26%), radial-gradient(circle at 85% 10%, rgba(246, 202, 89, 0.15), transparent 22%), linear-gradient(180deg, #fbf4e7 0%, #f3e9d2 100%);
+  min-height: 100vh;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+
+/* Header */
+.merch-header { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.merch-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.merch-header__logo { height: 50px; width: auto; object-fit: contain; }
+.merch-header__nav { display: flex; gap: 1.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.merch-header__nav a { color: var(--muted); transition: color 0.2s; }
+.merch-header__nav a:hover { color: var(--sunset-red); }
+
+/* Hero */
+.merch-hero { padding: 4rem 0 3rem; text-align: center; }
+.merch-hero__logo { max-width: 400px; margin: 0 auto 2rem; }
+.merch-hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: 0.02em; line-height: 1; margin-bottom: 1rem; }
+.merch-hero p { color: var(--muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+
+/* Products */
+.merch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0; }
+@media (max-width: 900px) { .merch-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .merch-grid { grid-template-columns: 1fr; } }
+.merch-card { background: var(--panel-strong); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.merch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.merch-card__image { aspect-ratio: 1; background: #f8f0e0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.merch-card__image img { width: 100%; height: 100%; object-fit: cover; }
+.merch-card__overlay { position: absolute; inset: 0; background: rgba(20, 17, 15, 0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
+.merch-card:hover .merch-card__overlay { opacity: 1; }
+.merch-card__overlay button { background: var(--sunset-red); color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+.merch-card__info { padding: 1rem 1.25rem 1.5rem; }
+.merch-card__name { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 0.25rem; }
+.merch-card__type { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.merch-card__price { font-size: 1.2rem; font-weight: 700; color: var(--sunset-red); }
+.merch-card__badge { position: absolute; top: 12px; left: 12px; background: var(--sunset-red); color: white; font-size: 0.6rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* Modal */
+.merch-modal { display: none; position: fixed; inset: 0; background: rgba(20, 17, 15, 0.8); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+.merch-modal.active { display: flex; }
+.merch-modal__content { background: var(--paper); border-radius: 16px; max-width: 500px; width: 100%; padding: 2rem; position: relative; max-height: 90vh; overflow-y: auto; }
+.merch-modal__close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--muted); }
+.merch-modal__image { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+.merch-modal__name { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.merch-modal__desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; }
+.merch-modal__sizes { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.merch-size-btn { padding: 8px 16px; border: 1px solid var(--line); border-radius: 6px; background: white; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.15s; }
+.merch-size-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+.merch-modal__pay { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.merch-pay-btn { flex: 1; min-width: 120px; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; text-align: center; cursor: pointer; border: none; transition: transform 0.15s; }
+.merch-pay-btn:hover { transform: translateY(-2px); }
+.merch-pay-btn--stripe { background: var(--sunset-red); color: white; }
+.merch-pay-btn--other { background: transparent; border: 1px solid var(--line); color: var(--ink); }
+.merch-pay-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; justify-content: center; }
+.merch-pay-chip { font-size: 0.6rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); cursor: pointer; letter-spacing: 0.1em; }
+.merch-pay-chip:hover { border-color: var(--sunset-red); color: var(--sunset-red); }
+
+/* Payment section */
+.merch-pay-section { text-align: center; margin: 3rem 0; padding: 2rem; background: var(--panel); border-radius: 16px; border: 1px solid var(--line); }
+.merch-pay-section h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; margin-bottom: 1rem; }
+.merch-pay-row { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.merch-pay-row a, .merch-pay-row button { font-size: 0.7rem; padding: 8px 16px; border-radius: 100px; border: 1px solid var(--line); background: white; cursor: pointer; color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: 0.05em; transition: all 0.15s; }
+.merch-pay-row a:hover, .merch-pay-row button:hover { border-color: var(--sunset-red); color: var(--sunset-red); }
+
+/* Footer */
+.merch-footer { padding: 3rem 0 2rem; border-top: 1px solid var(--line); text-align: center; }
+.merch-footer__logo { height: 40px; margin: 0 auto 1rem; }
+.merch-footer p { color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
+.merch-footer__links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; }
+.merch-footer__links a { font-size: 0.75rem; color: var(--muted); }
+.merch-footer__links a:hover { color: var(--sunset-red); }
+.merch-footer__copy { font-size: 0.7rem; color: var(--muted); margin-top: 1.5rem; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="merch-header">
+  <div class="container">
+    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean logo" class="merch-header__logo" />
+    <nav class="merch-header__nav">
+      <a href="index.html">Home</a>
+      <a href="merch.html">Merch</a>
+      <a href="flyer.html">Shows</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="merch-hero">
+  <div class="container">
+    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean" class="merch-hero__logo" />
+    <h1>JEREMY DEAN MERCH</h1>
+    <p>Official merchandise designed by Jeremy Dean. Printed and shipped on demand. Every order supports independent music.</p>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="container">
+  <div class="merch-grid" id="productGrid">
+    <!-- Products injected by JS -->
+  </div>
+</section>
+
+<!-- Payment section -->
+<section class="container">
+  <div class="merch-pay-section">
+    <h3>Quick Pay Options</h3>
+    <div class="merch-pay-row">
+      <a href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a>
+      <a href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a>
+      <button onclick="copyText('joseph@xcalitoy.com')">ZELLE</button>
+      <a href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a>
+      <button onclick="copyText('0x77A4bFe14Afb738f37c75B3B9310854e60AB3879')">USDC</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="merch-footer">
+  <div class="container">
+    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean" class="merch-footer__logo" />
+    <p>Jeremy Dean Music. Independent. Ocean Beach, San Diego.</p>
+    <div class="merch-footer__links">
+      <a href="index.html">Home</a>
+      <a href="flyer.html">Shows</a>
+      <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">SoundCloud</a>
+      <a href="https://jeremydeanmusic.com">jeremydeanmusic.com</a>
+    </div>
+    <p class="merch-footer__copy">(c) <span id="year"></span> Jeremy Dean Music</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="merch-modal" id="modal">
+  <div class="merch-modal__content">
+    <button class="merch-modal__close" onclick="closeModal()">&times;</button>
+    <img class="merch-modal__image" id="modalImage" src="" alt="" />
+    <h2 class="merch-modal__name" id="modalName"></h2>
+    <p class="merch-modal__desc" id="modalDesc"></p>
+    <div class="merch-modal__sizes" id="modalSizes"></div>
+    <div class="merch-modal__pay">
+      <button class="merch-pay-btn merch-pay-btn--stripe" id="modalStripe">Buy with Card</button>
+      <button class="merch-pay-btn merch-pay-btn--other" id="modalOther">Other Payment</button>
+    </div>
+    <div class="merch-pay-chips" id="modalChips"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const PRODUCTS = [
+  { name: 'Jeremy Dean Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'The Jeremy Dean treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Unplugged Hoodie', type: 'Black Hoodie', price: '$52', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Jeremy Dean Unplugged hoodie. Heavyweight cotton blend. Printed on demand.' },
+  { name: 'Bridge Logo Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['One Size'], desc: 'Jeremy Dean bridge logo on a natural canvas tote. Printed on demand.' },
+  { name: 'Acoustic Set Poster', type: '11x17 Poster', price: '$18', image: 'assets/jeremy-dean-unplugged-poster.jpg', sizes: ['11x17'], desc: 'Jeremy Dean Unplugged event poster. Printed on demand.' },
+  { name: 'Logo Sticker Pack', type: '3 Vinyl Stickers', price: '$8', image: 'assets/jeremy-dean-brand-mark.jpg', sizes: ['3 Pack'], desc: 'Three Jeremy Dean vinyl stickers. Weatherproof. Printed on demand.' },
+  { name: 'Ocean Beach Hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-brand-mark.jpg', sizes: ['One Size'], desc: 'Jeremy Dean embroidered cap. Adjustable. One size fits all.' },
+];
+
+const grid = document.getElementById('productGrid');
+PRODUCTS.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'merch-card';
+  card.innerHTML = `
+    <div class="merch-card__image">
+      ${i < 2 ? '<span class="merch-card__badge">New</span>' : ''}
+      <img src="${p.image}" alt="${p.name}" />
+      <div class="merch-card__overlay"><button>View Details</button></div>
+    </div>
+    <div class="merch-card__info">
+      <div class="merch-card__name">${p.name}</div>
+      <div class="merch-card__type">${p.type}</div>
+      <div class="merch-card__price">${p.price}</div>
+    </div>
+  `;
+  card.onclick = () => openModal(p);
+  grid.appendChild(card);
+});
+
+let currentProduct = null;
+let currentSize = null;
+
+function openModal(p) {
+  currentProduct = p;
+  currentSize = p.sizes[0];
+  document.getElementById('modalImage').src = p.image;
+  document.getElementById('modalImage').alt = p.name;
+  document.getElementById('modalName').textContent = p.name;
+  document.getElementById('modalDesc').textContent = p.desc;
+  const sizesEl = document.getElementById('modalSizes');
+  sizesEl.innerHTML = '';
+  p.sizes.forEach(s => {
+    const btn = document.createElement('button');
+    btn.className = 'merch-size-btn' + (s === currentSize ? ' active' : '');
+    btn.textContent = s;
+    btn.onclick = () => { currentSize = s; document.querySelectorAll('.merch-size-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); };
+    sizesEl.appendChild(btn);
+  });
+  const chipsEl = document.getElementById('modalChips');
+  chipsEl.innerHTML = '<a class="merch-pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a><a class="merch-pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a><span class="merch-pay-chip" onclick="copyText(\'joseph@xcalitoy.com\')">ZELLE</span><a class="merch-pay-chip" href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a>';
+  document.getElementById('modal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
+
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target.id === 'modal') closeModal();
+});
+
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => alert('Copied: ' + text));
+}
+</script>
+
+</body>
+</html>
