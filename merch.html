@@ -187,12 +187,18 @@ a { color: inherit; text-decoration: none; }
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const PRODUCTS = [
-  { name: 'Jeremy Dean Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'The Jeremy Dean treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
-  { name: 'Unplugged Hoodie', type: 'Black Hoodie', price: '$52', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Jeremy Dean Unplugged hoodie. Heavyweight cotton blend. Printed on demand.' },
-  { name: 'Bridge Logo Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-merch-logo.jpg', sizes: ['One Size'], desc: 'Jeremy Dean bridge logo on a natural canvas tote. Printed on demand.' },
-  { name: 'Acoustic Set Poster', type: '11x17 Poster', price: '$18', image: 'assets/jeremy-dean-unplugged-poster.jpg', sizes: ['11x17'], desc: 'Jeremy Dean Unplugged event poster. Printed on demand.' },
-  { name: 'Logo Sticker Pack', type: '3 Vinyl Stickers', price: '$8', image: 'assets/jeremy-dean-brand-mark.jpg', sizes: ['3 Pack'], desc: 'Three Jeremy Dean vinyl stickers. Weatherproof. Printed on demand.' },
-  { name: 'Ocean Beach Hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-brand-mark.jpg', sizes: ['One Size'], desc: 'Jeremy Dean embroidered cap. Adjustable. One size fits all.' },
+  { name: 'Jeremy Dean Gold Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-gold-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'The gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Navy Blue Logo Hoodie', type: 'Navy Hoodie', price: '$52', image: 'assets/jeremy-dean-logo-blue-navy.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Blue treble clef bridge logo on a navy hoodie. Heavyweight cotton blend. Printed on demand.' },
+  { name: 'Purple Logo Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-logo-purple-black.jpg', sizes: ['One Size'], desc: 'Purple treble clef bridge logo on a natural canvas tote. Printed on demand.' },
+  { name: 'Orange Logo Poster', type: '11x17 Poster', price: '$18', image: 'assets/jeremy-dean-logo-orange-black.jpg', sizes: ['11x17'], desc: 'Orange treble clef bridge logo poster. Printed on demand.' },
+  { name: 'Teal Logo Sticker Pack', type: '3 Vinyl Stickers', price: '$8', image: 'assets/jeremy-dean-logo-teal-dark.jpg', sizes: ['3 Pack'], desc: 'Three teal Jeremy Dean vinyl stickers. Weatherproof. Printed on demand.' },
+  { name: 'Emerald Gold Hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-logo-emerald-gold.jpg', sizes: ['One Size'], desc: 'Emerald and gold treble clef bridge embroidered cap. Adjustable.' },
+  { name: 'Neon Pink Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-neon-pink.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Neon pink treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Silver Gold Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-silver-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Silver and gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Dark Outline Poster', type: '8.5x11 Poster', price: '$15', image: 'assets/jeremy-dean-logo-dark-outline.jpg', sizes: ['8.5x11'], desc: 'Minimal dark outline treble clef poster. Printed on demand.' },
+  { name: 'White Monogram Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-logo-white-monogram.jpg', sizes: ['One Size'], desc: 'White monogram treble and bass clef on a natural canvas tote. Printed on demand.' },
+  { name: 'Thin Spaced Sticker', type: 'Vinyl Sticker', price: '$5', image: 'assets/jeremy-dean-logo-thin-spaced.jpg', sizes: ['One Size'], desc: 'Minimal thin spaced Jeremy Dean vinyl sticker. Weatherproof.' },
+  { name: 'Gold Black Logo Hoodie', type: 'Black Hoodie', price: '$52', image: 'assets/jeremy-dean-logo-gold-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Gold treble clef bridge logo on a black hoodie. Heavyweight cotton blend. Printed on demand.' },
 ];
 
 const grid = document.getElementById('productGrid');
