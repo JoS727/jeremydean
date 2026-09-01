@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Jeremy Dean Merch | Official</title>
-<meta name="description" content="Official Jeremy Dean merchandise. Shirts, hoodies, totes, and more. Designed by Jeremy Dean. Printed and shipped on demand." />
+<meta name="description" content="Official Jeremy Dean merchandise. Shirts, hoodies, hats, totes, and more. 11 logo variants across 17 products. Printed and shipped on demand." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Jeremy Dean Merch | Official" />
-<meta property="og:description" content="Official Jeremy Dean merchandise. Printed and shipped on demand." />
+<meta property="og:description" content="Official Jeremy Dean merchandise. 11 logo variants. Printed and shipped on demand." />
 <meta property="og:url" content="https://jeremydeanmusic.com/merch.html" />
-<meta property="og:image" content="https://jeremydeanmusic.com/assets/jeremy-dean-merch-logo.jpg" />
+<meta property="og:image" content="https://jeremydeanmusic.com/assets/jeremy-dean-tee-gold-black.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,10 +20,6 @@
   --ink: #14110f;
   --sunset-red: #e75a45;
   --sunset-orange: #f3a64d;
-  --sunset-yellow: #f6ca59;
-  --horizon-green: #b5c95d;
-  --panel: rgba(243, 233, 210, 0.78);
-  --panel-strong: rgba(243, 233, 210, 0.9);
   --muted: rgba(20, 17, 15, 0.72);
   --line: rgba(20, 17, 15, 0.12);
   --shadow: 0 24px 80px rgba(20, 17, 15, 0.14);
@@ -40,39 +36,39 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 .container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
 
-/* Header */
 .merch-header { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .merch-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.merch-header__logo { height: 50px; width: auto; object-fit: contain; }
+.merch-header__logo { height: 50px; width: auto; }
 .merch-header__nav { display: flex; gap: 1.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 .merch-header__nav a { color: var(--muted); transition: color 0.2s; }
 .merch-header__nav a:hover { color: var(--sunset-red); }
 
-/* Hero */
-.merch-hero { padding: 4rem 0 3rem; text-align: center; }
-.merch-hero__logo { max-width: 400px; margin: 0 auto 2rem; }
+.merch-hero { padding: 4rem 0 2rem; text-align: center; }
 .merch-hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; letter-spacing: 0.02em; line-height: 1; margin-bottom: 1rem; }
 .merch-hero p { color: var(--muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+.merch-hero__count { display: inline-flex; gap: 1.5rem; margin-top: 1.5rem; }
+.merch-hero__stat { text-align: center; }
+.merch-hero__stat strong { font-family: 'Oswald', sans-serif; font-size: 1.8rem; display: block; color: var(--sunset-red); }
+.merch-hero__stat span { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
 
-/* Products */
 .merch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0; }
 @media (max-width: 900px) { .merch-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .merch-grid { grid-template-columns: 1fr; } }
-.merch-card { background: var(--panel-strong); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-.merch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.merch-card__image { aspect-ratio: 1; background: #f8f0e0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.merch-card__image img { width: 100%; height: 100%; object-fit: cover; }
-.merch-card__overlay { position: absolute; inset: 0; background: rgba(20, 17, 15, 0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
-.merch-card:hover .merch-card__overlay { opacity: 1; }
-.merch-card__overlay button { background: var(--sunset-red); color: white; border: none; padding: 10px 24px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
-.merch-card__info { padding: 1rem 1.25rem 1.5rem; }
-.merch-card__name { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 0.25rem; }
-.merch-card__type { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-.merch-card__price { font-size: 1.2rem; font-weight: 700; color: var(--sunset-red); }
-.merch-card__badge { position: absolute; top: 12px; left: 12px; background: var(--sunset-red); color: white; font-size: 0.6rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.1em; text-transform: uppercase; }
 
-/* Modal */
-.merch-modal { display: none; position: fixed; inset: 0; background: rgba(20, 17, 15, 0.8); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+.merch-card { background: rgba(243, 233, 210, 0.9); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.merch-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.merch-card__image { aspect-ratio: 1; background: #1a1a1a; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.merch-card__image img { width: 100%; height: 100%; object-fit: cover; }
+.merch-card__overlay { position: absolute; inset: 0; background: rgba(20,17,15,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
+.merch-card:hover .merch-card__overlay { opacity: 1; }
+.merch-card__overlay button { background: var(--sunset-red); color: #fff; border: none; padding: 10px 24px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+.merch-card__badge { position: absolute; top: 12px; left: 12px; background: var(--sunset-red); color: #fff; font-size: 0.6rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.1em; text-transform: uppercase; }
+.merch-card__info { padding: 1rem 1.25rem 1.5rem; }
+.merch-card__name { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.merch-card__type { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.merch-card__price { font-size: 1.2rem; font-weight: 700; color: var(--sunset-red); }
+
+.merch-modal { display: none; position: fixed; inset: 0; background: rgba(20,17,15,0.85); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
 .merch-modal.active { display: flex; }
 .merch-modal__content { background: var(--paper); border-radius: 16px; max-width: 500px; width: 100%; padding: 2rem; position: relative; max-height: 90vh; overflow-y: auto; }
 .merch-modal__close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--muted); }
@@ -80,25 +76,23 @@ a { color: inherit; text-decoration: none; }
 .merch-modal__name { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
 .merch-modal__desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; }
 .merch-modal__sizes { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.merch-size-btn { padding: 8px 16px; border: 1px solid var(--line); border-radius: 6px; background: white; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.15s; }
-.merch-size-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+.merch-size-btn { padding: 8px 16px; border: 1px solid var(--line); border-radius: 6px; background: #fff; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all 0.15s; }
+.merch-size-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
 .merch-modal__pay { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .merch-pay-btn { flex: 1; min-width: 120px; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; text-align: center; cursor: pointer; border: none; transition: transform 0.15s; }
 .merch-pay-btn:hover { transform: translateY(-2px); }
-.merch-pay-btn--stripe { background: var(--sunset-red); color: white; }
+.merch-pay-btn--stripe { background: var(--sunset-red); color: #fff; }
 .merch-pay-btn--other { background: transparent; border: 1px solid var(--line); color: var(--ink); }
 .merch-pay-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; justify-content: center; }
 .merch-pay-chip { font-size: 0.6rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); cursor: pointer; letter-spacing: 0.1em; }
 .merch-pay-chip:hover { border-color: var(--sunset-red); color: var(--sunset-red); }
 
-/* Payment section */
-.merch-pay-section { text-align: center; margin: 3rem 0; padding: 2rem; background: var(--panel); border-radius: 16px; border: 1px solid var(--line); }
+.merch-pay-section { text-align: center; margin: 3rem 0; padding: 2rem; background: rgba(243, 233, 210, 0.78); border-radius: 16px; border: 1px solid var(--line); }
 .merch-pay-section h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; margin-bottom: 1rem; }
 .merch-pay-row { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-.merch-pay-row a, .merch-pay-row button { font-size: 0.7rem; padding: 8px 16px; border-radius: 100px; border: 1px solid var(--line); background: white; cursor: pointer; color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: 0.05em; transition: all 0.15s; }
+.merch-pay-row a, .merch-pay-row button { font-size: 0.7rem; padding: 8px 16px; border-radius: 100px; border: 1px solid var(--line); background: #fff; cursor: pointer; color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: 0.05em; transition: all 0.15s; }
 .merch-pay-row a:hover, .merch-pay-row button:hover { border-color: var(--sunset-red); color: var(--sunset-red); }
 
-/* Footer */
 .merch-footer { padding: 3rem 0 2rem; border-top: 1px solid var(--line); text-align: center; }
 .merch-footer__logo { height: 40px; margin: 0 auto 1rem; }
 .merch-footer p { color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
@@ -110,10 +104,9 @@ a { color: inherit; text-decoration: none; }
 </head>
 <body>
 
-<!-- Header -->
 <header class="merch-header">
   <div class="container">
-    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean logo" class="merch-header__logo" />
+    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean" class="merch-header__logo" />
     <nav class="merch-header__nav">
       <a href="index.html">Home</a>
       <a href="merch.html">Merch</a>
@@ -122,23 +115,22 @@ a { color: inherit; text-decoration: none; }
   </div>
 </header>
 
-<!-- Hero -->
 <section class="merch-hero">
   <div class="container">
-    <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean" class="merch-hero__logo" />
     <h1>JEREMY DEAN MERCH</h1>
-    <p>Official merchandise designed by Jeremy Dean. Printed and shipped on demand. Every order supports independent music.</p>
+    <p>11 logo variants across 17 products. Shirts, hoodies, hats, and totes. Designed by Jeremy Dean. Printed and shipped on demand.</p>
+    <div class="merch-hero__count">
+      <div class="merch-hero__stat"><strong>11</strong><span>Logo Variants</span></div>
+      <div class="merch-hero__stat"><strong>17</strong><span>Products</span></div>
+      <div class="merch-hero__stat"><strong>50/50</strong><span>Artist Split</span></div>
+    </div>
   </div>
 </section>
 
-<!-- Products -->
 <section class="container">
-  <div class="merch-grid" id="productGrid">
-    <!-- Products injected by JS -->
-  </div>
+  <div class="merch-grid" id="productGrid"></div>
 </section>
 
-<!-- Payment section -->
 <section class="container">
   <div class="merch-pay-section">
     <h3>Quick Pay Options</h3>
@@ -152,7 +144,6 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="merch-footer">
   <div class="container">
     <img src="assets/jeremy-dean-merch-logo.jpg" alt="Jeremy Dean" class="merch-footer__logo" />
@@ -167,7 +158,6 @@ a { color: inherit; text-decoration: none; }
   </div>
 </footer>
 
-<!-- Modal -->
 <div class="merch-modal" id="modal">
   <div class="merch-modal__content">
     <button class="merch-modal__close" onclick="closeModal()">&times;</button>
@@ -186,19 +176,38 @@ a { color: inherit; text-decoration: none; }
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const STRIPE_PRICES = {
+  'jeremy-dean-thin-outline-tee': 'price_1UAwavISCKHDtOuFcqG0OkVR',
+  'jeremy-dean-white-d-monogram-tee': 'price_1UAwavISCKHDtOuFz47IIsV5',
+  'jeremy-dean-sound-waves-tee': 'price_1UAwawISCKHDtOuFFr0yklc5',
+  'jeremy-dean-sunset-retro-tee': 'price_1UAwawISCKHDtOuFUcYJBmfE',
+  'jeremy-dean-calligraphic-tee': 'price_1UAwawISCKHDtOuF89QdNscI',
+  'jeremy-dean-thin-outline-hat': 'price_1UAwaxISCKHDtOuFXJVLIO82',
+  'jeremy-dean-white-d-monogram-hat': 'price_1UAwaxISCKHDtOuFoCSDnzVf',
+  'jeremy-dean-sound-waves-hat': 'price_1UAwayISCKHDtOuFLH9wyXOD',
+  'jeremy-dean-sunset-retro-hat': 'price_1UAwayISCKHDtOuFuOOVsziD',
+  'jeremy-dean-calligraphic-hat': 'price_1UAwazISCKHDtOuFNB3wtrG8',
+};
+
 const PRODUCTS = [
-  { name: 'Jeremy Dean Gold Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-gold-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'The gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
-  { name: 'Navy Blue Logo Hoodie', type: 'Navy Hoodie', price: '$52', image: 'assets/jeremy-dean-logo-blue-navy.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Blue treble clef bridge logo on a navy hoodie. Heavyweight cotton blend. Printed on demand.' },
-  { name: 'Purple Logo Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-logo-purple-black.jpg', sizes: ['One Size'], desc: 'Purple treble clef bridge logo on a natural canvas tote. Printed on demand.' },
-  { name: 'Orange Logo Poster', type: '11x17 Poster', price: '$18', image: 'assets/jeremy-dean-logo-orange-black.jpg', sizes: ['11x17'], desc: 'Orange treble clef bridge logo poster. Printed on demand.' },
-  { name: 'Teal Logo Sticker Pack', type: '3 Vinyl Stickers', price: '$8', image: 'assets/jeremy-dean-logo-teal-dark.jpg', sizes: ['3 Pack'], desc: 'Three teal Jeremy Dean vinyl stickers. Weatherproof. Printed on demand.' },
-  { name: 'Emerald Gold Hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-logo-emerald-gold.jpg', sizes: ['One Size'], desc: 'Emerald and gold treble clef bridge embroidered cap. Adjustable.' },
-  { name: 'Neon Pink Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-neon-pink.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Neon pink treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
-  { name: 'Silver Gold Logo Tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-logo-silver-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Silver and gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
-  { name: 'Dark Outline Poster', type: '8.5x11 Poster', price: '$15', image: 'assets/jeremy-dean-logo-dark-outline.jpg', sizes: ['8.5x11'], desc: 'Minimal dark outline treble clef poster. Printed on demand.' },
-  { name: 'White Monogram Tote', type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-logo-white-monogram.jpg', sizes: ['One Size'], desc: 'White monogram treble and bass clef on a natural canvas tote. Printed on demand.' },
-  { name: 'Thin Spaced Sticker', type: 'Vinyl Sticker', price: '$5', image: 'assets/jeremy-dean-logo-thin-spaced.jpg', sizes: ['One Size'], desc: 'Minimal thin spaced Jeremy Dean vinyl sticker. Weatherproof.' },
-  { name: 'Gold Black Logo Hoodie', type: 'Black Hoodie', price: '$52', image: 'assets/jeremy-dean-logo-gold-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Gold treble clef bridge logo on a black hoodie. Heavyweight cotton blend. Printed on demand.' },
+  { name: 'Gold Logo Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-gold-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Navy Blue Logo Hoodie', slug: null, type: 'Navy Hoodie', price: '$52', image: 'assets/jeremy-dean-hoodie-blue-navy.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Blue treble clef bridge logo on a navy hoodie. Heavyweight cotton blend. Printed on demand.' },
+  { name: 'Gold Logo Hat', slug: null, type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-hat-gold.jpg', sizes: ['One Size'], desc: 'Gold treble clef bridge logo embroidered on a black cap. Adjustable.' },
+  { name: 'Purple Logo Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-purple-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Purple treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Orange Logo Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-orange-black.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Orange treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Teal Logo Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-teal-dark.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Teal treble clef with D monogram on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Emerald Gold Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-emerald-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Emerald and gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Neon Pink Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-neon-pink.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Neon pink treble clef with cyan bridges on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Silver Gold Tee', slug: null, type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-silver-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Silver and gold treble clef bridge logo on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'White Monogram Tee', slug: 'jeremy-dean-white-d-monogram-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-white-monogram.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'White treble clef D monogram on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Thin Outline Tee', slug: 'jeremy-dean-thin-outline-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-thin-outline.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Minimal thin outline treble clef on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Sunset Retro Tee', slug: 'jeremy-dean-sunset-retro-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-sunset-retro.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Retro sunset seascape with Jeremy Dean script on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Calligraphic Tee', slug: 'jeremy-dean-calligraphic-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-calligraphic.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Elegant calligraphic monogram on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Sound Waves Tee', slug: 'jeremy-dean-sound-waves-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jeremy-dean-tee-thin-outline.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Treble clef with sound wave bars on a black tee. 100% cotton. Printed on demand.' },
+  { name: 'Purple Logo Hat', slug: 'jeremy-dean-white-d-monogram-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-hat-purple.jpg', sizes: ['One Size'], desc: 'Purple treble clef logo embroidered on a black cap. Adjustable.' },
+  { name: 'Orange Logo Hat', slug: 'jeremy-dean-sound-waves-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-hat-orange.jpg', sizes: ['One Size'], desc: 'Orange treble clef logo embroidered on a black cap. Adjustable.' },
+  { name: 'White Monogram Hat', slug: 'jeremy-dean-calligraphic-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jeremy-dean-hat-white-monogram.jpg', sizes: ['One Size'], desc: 'White treble clef D monogram embroidered on a black cap. Adjustable.' },
+  { name: 'Teal Logo Tote', slug: null, type: 'Canvas Tote', price: '$24', image: 'assets/jeremy-dean-tote-teal.jpg', sizes: ['One Size'], desc: 'Teal treble clef logo on a natural canvas tote. Printed on demand.' },
 ];
 
 const grid = document.getElementById('productGrid');
@@ -207,7 +216,7 @@ PRODUCTS.forEach((p, i) => {
   card.className = 'merch-card';
   card.innerHTML = `
     <div class="merch-card__image">
-      ${i < 2 ? '<span class="merch-card__badge">New</span>' : ''}
+      ${i < 3 ? '<span class="merch-card__badge">New</span>' : ''}
       <img src="${p.image}" alt="${p.name}" />
       <div class="merch-card__overlay"><button>View Details</button></div>
     </div>
@@ -241,21 +250,32 @@ function openModal(p) {
     sizesEl.appendChild(btn);
   });
   const chipsEl = document.getElementById('modalChips');
-  chipsEl.innerHTML = '<a class="merch-pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a><a class="merch-pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a><span class="merch-pay-chip" onclick="copyText(\'joseph@xcalitoy.com\')">ZELLE</span><a class="merch-pay-chip" href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a>';
+  chipsEl.innerHTML = '<a class="merch-pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a><a class="merch-pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a><span class="merch-pay-chip" onclick="copyText(\'joseph@xcalitoy.com\')">ZELLE</span><a class="merch-pay-chip" href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a><span class="merch-pay-chip" onclick="copyText(\'0x77A4bFe14Afb738f37c75B3B9310854e60AB3879\')">USDC</span>';
+  const stripeBtn = document.getElementById('modalStripe');
+  if (p.slug && STRIPE_PRICES[p.slug]) {
+    stripeBtn.onclick = () => createStripeCheckout(p);
+    stripeBtn.style.opacity = '1';
+    stripeBtn.textContent = 'Buy with Card';
+  } else {
+    stripeBtn.onclick = () => alert('Use Cash App, Venmo, or Zelle for this item.');
+    stripeBtn.style.opacity = '0.6';
+  }
   document.getElementById('modal').classList.add('active');
 }
 
-function closeModal() {
-  document.getElementById('modal').classList.remove('active');
+function createStripeCheckout(product) {
+  const priceId = STRIPE_PRICES[product.slug];
+  if (!priceId) return;
+  fetch('https://email-capture.calitoy.workers.dev', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'checkout', priceId, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize } }),
+  }).then(r => r.json()).then(data => { if (data.url) window.location.href = data.url; else alert('Checkout error'); }).catch(err => alert('Network error'));
 }
 
-document.getElementById('modal').addEventListener('click', (e) => {
-  if (e.target.id === 'modal') closeModal();
-});
-
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => alert('Copied: ' + text));
-}
+function closeModal() { document.getElementById('modal').classList.remove('active'); }
+document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+function copyText(text) { navigator.clipboard.writeText(text).then(() => alert('Copied: ' + text)); }
 </script>
 
 </body>
