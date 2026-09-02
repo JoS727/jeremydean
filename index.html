@@ -1,168 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeremy Dean Unplugged | Flyer Version</title>
-    <meta name="description" content="A flyer-style landing page for Jeremy Dean Unplugged with the show details separated into clean sections." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="flyer.css" />
-  </head>
-  <body>
-    <main class="flyer-page">
-      <section class="flyer-hero flyer-hero--posterish flyer-hero--composite">
-        <div class="flyer-hero__art">
-          <img src="assets/jeremy-dean-unplugged-poster.jpg" alt="Jeremy Dean Unplugged event poster for September 5, 2026 at Uppercuts Barbershop." />
-        </div>
-        <div class="flyer-hero__content">
-          <img src="assets/jeremy-dean-brand-mark.jpg" alt="Jeremy Dean musical bridge logo" class="flyer-hero__logo" />
-          <p class="flyer-kicker">Live acoustic set</p>
-          <h1>Jeremy Dean<br />Unplugged</h1>
-          <div class="flyer-poster-strips">
-            <div class="flyer-strip"><span>Saturday</span><strong>September 5th, 2026</strong></div>
-            <div class="flyer-strip"><span>Doors / music</span><strong>7:00 PM</strong></div>
-            <div class="flyer-strip"><span>Location</span><strong>Uppercuts Barbershop · Ocean Beach</strong></div>
-          </div>
-          <div class="flyer-lineup">
-            <p class="flyer-lineup__label">Lineup</p>
-            <div class="flyer-lineup__headliner">Jeremy Dean</div>
-            <div class="flyer-lineup__support">with Davey Carano + Coastal Creature</div>
-          </div>
-          <div class="flyer-ticket-badge">
-            <span>$20</span>
-            <small>includes food + drink</small>
-          </div>
-          <div class="flyer-flow-banner">
-            <div><span>1</span><strong>Submit guest info</strong></div>
-            <div><span>2</span><strong>Send $20 payment</strong></div>
-          </div>
-          <p class="flyer-subhead">Get on the guest list and complete your ticket payment for Jeremy Dean Unplugged at Uppercuts Barbershop in Ocean Beach.</p>
-          <div class="flyer-cta-row">
-            <a class="flyer-button flyer-button--primary" href="#tickets">Tickets + guest list</a>
-            <a class="flyer-button flyer-button--ghost" href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">Listen on SoundCloud</a>
-          </div>
-        </div>
-      </section>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeremy Dean | Music</title>
+<meta name="description" content="Jeremy Dean. Independent musician. Ocean Beach, San Diego. Acoustic sets, dark alternative rock, industrial electronic, cinematic trip-hop." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Jeremy Dean | Music" />
+<meta property="og:description" content="Independent musician from Ocean Beach, San Diego. Acoustic sets, dark alternative, industrial electronic, cinematic trip-hop." />
+<meta property="og:url" content="https://jeremydeanmusic.com" />
+<meta property="og:image" content="https://jeremydeanmusic.com/assets/jeremy-dean-unplugged-poster.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="flyer.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
 
-      <section class="flyer-grid flyer-grid--posterish">
-        <article class="flyer-panel flyer-panel--highlight">
-          <p class="flyer-label">Special guests</p>
-          <h2>Davey Carano</h2>
-        </article>
+<header class="site-nav">
+  <div class="site-nav__inner">
+    <a href="/" class="site-nav__logo">
+      <img src="assets/jeremy-dean-brand-mark.jpg" alt="Jeremy Dean" />
+    </a>
+    <nav class="site-nav__links">
+      <a href="/">Home</a>
+      <a href="/flyer.html">Shows</a>
+      <a href="/merch.html">Merch</a>
+      <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">Music</a>
+    </nav>
+  </div>
+</header>
 
-        <article class="flyer-panel flyer-panel--guest-card">
-          <img src="assets/coastal-creature-guest-card.jpg" alt="Coastal Creature guest promo art with the note Come early grab a seat." class="flyer-panel__image" />
-          <div>
-            <p class="flyer-label">Special guest spotlight</p>
-            <h2>Coastal Creature</h2>
-          </div>
-        </article>
+<main class="site-main">
 
-        <article class="flyer-panel">
-          <p class="flyer-label">Location</p>
-          <h2>Uppercuts Barbershop</h2>
-          <p>Barbershop on Newport Ave<br />Ocean Beach, San Diego, CA 92107</p>
-        </article>
+  <section class="site-hero">
+    <div class="site-hero__bg">
+      <img src="assets/jeremy-dean-unplugged-poster.jpg" alt="" />
+    </div>
+    <div class="site-hero__overlay"></div>
+    <div class="site-hero__content">
+      <p class="site-hero__kicker">Ocean Beach, San Diego</p>
+      <h1>Jeremy Dean</h1>
+      <p class="site-hero__sub">Independent musician. Acoustic sets, dark alternative rock, industrial electronic, cinematic trip-hop.</p>
+      <div class="site-hero__actions">
+        <a href="/flyer.html" class="site-btn site-btn--primary">Next Show: Sept 5</a>
+        <a href="/merch.html" class="site-btn site-btn--ghost">Shop Merch</a>
+      </div>
+    </div>
+  </section>
 
-        <article class="flyer-panel flyer-panel--flow">
-          <p class="flyer-label">Reserve</p>
-          <h2>Reserve your spot</h2>
-          <ol class="flyer-flow-list">
-            <li><strong>Step 1:</strong> submit your guest-list info.</li>
-            <li><strong>Step 2:</strong> send the <strong>$20</strong> payment to lock in your spot.</li>
-          </ol>
-          <a class="flyer-button flyer-button--primary" href="#tickets">Go to the ticket form</a>
-        </article>
-      </section>
+  <section class="site-section">
+    <div class="site-section__head">
+      <p class="site-label">About</p>
+      <h2>Dark, romantic, confrontational</h2>
+    </div>
+    <div class="site-about">
+      <div class="site-about__text">
+        <p>Jeremy Dean is an independent musician based in Ocean Beach, San Diego. His sound blends dark alternative rock, industrial electronic music, cinematic trip-hop, emo-grunge, and hip-hop.</p>
+        <p>The music is emotionally raw but carefully structured. Moving quickly between intimate, restrained passages, tense rhythmic sections, sharp rap entries, and large cathartic hooks. Production features heavy live drums, deep distorted synth bass, cold electronic textures, atmospheric pads, and dramatic silence.</p>
+        <p>His writing is deeply personal and direct. Common themes include loyalty, betrayal, survival, love, abandonment, self-destruction, faith, identity, and redemption. Sacred imagery alongside blunt everyday language, balancing poetic symbolism with lines that feel like an unfiltered confrontation.</p>
+      </div>
+      <div class="site-about__logo">
+        <img src="assets/jeremy-dean-brand-mark.jpg" alt="Jeremy Dean logo" />
+      </div>
+    </div>
+  </section>
 
-      <section class="flyer-details">
-        <div class="flyer-copy">
-          <p class="flyer-label">What to expect</p>
-          <h2>What to expect</h2>
-          <ul>
-            <li>Acoustic set from Jeremy Dean</li>
-            <li>Guest appearances from Davey Carano and Coastal Creature</li>
-            <li>Food and drinks included with admission</li>
-            <li>All ages welcome</li>
-            <li>Come early to grab a seat</li>
-          </ul>
-        </div>
-        <div class="flyer-actions-card">
-          <p class="flyer-label">Tickets</p>
-          <h2>Join the guest list and pay.</h2>
-          <p>Fill out your details, then send the <strong>$20</strong> payment to complete your ticket.</p>
-          <ol class="flyer-flow-list">
-            <li><strong>Guest list:</strong> submit your info.</li>
-            <li><strong>Payment:</strong> send the <strong>$20</strong> after submitting.</li>
-          </ol>
-          <a class="flyer-button flyer-button--primary" href="#tickets">Open tickets + guest list</a>
-        </div>
-      </section>
+  <section class="site-section site-section--dark">
+    <div class="site-section__head">
+      <p class="site-label">Next Show</p>
+      <h2>Jeremy Dean Unplugged</h2>
+    </div>
+    <div class="site-show-card">
+      <div class="site-show-card__art">
+        <img src="assets/jeremy-dean-unplugged-poster.jpg" alt="Jeremy Dean Unplugged poster" />
+      </div>
+      <div class="site-show-card__info">
+        <div class="site-show-strip"><span>Date</span><strong>Saturday, September 5, 2026</strong></div>
+        <div class="site-show-strip"><span>Doors</span><strong>7:00 PM</strong></div>
+        <div class="site-show-strip"><span>Where</span><strong>Uppercuts Barbershop, Ocean Beach</strong></div>
+        <div class="site-show-strip"><span>Lineup</span><strong>Jeremy Dean + Davey Carano + Coastal Creature</strong></div>
+        <div class="site-show-strip"><span>Tickets</span><strong>$20 (includes food + drink)</strong></div>
+        <a href="/flyer.html" class="site-btn site-btn--primary">Get tickets</a>
+      </div>
+    </div>
+  </section>
 
-      <section class="flyer-ticket-section" id="tickets">
-        <form class="flyer-form" id="guest-list-form" action="https://formsubmit.co/souzajeremy594@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Jeremy Dean paid ticket / guest list request" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_autoresponse" value="You're on the Jeremy Dean guest list request. We received your info and Jeremy's team will match it with your Venmo payment for the September 5 show at Uppercuts Barbershop." />
-          <input type="hidden" name="_next" value="https://jeremydeanmusic.com/flyer.html?submitted=1#tickets" />
-          <div class="flyer-form__label">Step 1 · Submit your info</div>
-          <div class="flyer-form__grid">
-            <label>
-              <span>Full name</span>
-              <input type="text" name="name" placeholder="Your full name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              <span>Phone</span>
-              <input type="tel" name="phone" placeholder="(555) 555-5555" />
-            </label>
-            <label>
-              <span>Party size</span>
-              <select name="party_size" required>
-                <option value="">Select</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-              </select>
-            </label>
-          </div>
-          <label>
-            <span>Event</span>
-            <input type="text" name="event" value="Jeremy Dean Unplugged — September 5, 2026 — Uppercuts Barbershop" />
-          </label>
-          <label>
-            <span>Venmo name or payment note</span>
-            <input type="text" name="payment_reference" placeholder="Name used on Venmo or payment note" required />
-          </label>
-          <label>
-            <span>Notes</span>
-            <textarea name="notes" rows="5" placeholder="Anything Jeremy's team should know?"></textarea>
-          </label>
-          <button class="flyer-button flyer-button--primary flyer-button--full" type="submit">Submit guest list info</button>
-        </form>
+  <section class="site-section">
+    <div class="site-section__head">
+      <p class="site-label">Merch</p>
+      <h2>11 logos, 18 products</h2>
+    </div>
+    <div class="site-merch-preview">
+      <div class="site-merch-grid">
+        <div class="site-merch-item"><img src="assets/jeremy-dean-tee-gold-black.jpg" alt="" /><span>Gold Logo Tee</span></div>
+        <div class="site-merch-item"><img src="assets/jeremy-dean-tee-purple-black.jpg" alt="" /><span>Purple Logo Tee</span></div>
+        <div class="site-merch-item"><img src="assets/jeremy-dean-tee-orange-black.jpg" alt="" /><span>Orange Logo Tee</span></div>
+        <div class="site-merch-item"><img src="assets/jeremy-dean-hat-gold.jpg" alt="" /><span>Gold Logo Hat</span></div>
+        <div class="site-merch-item"><img src="assets/jeremy-dean-hoodie-blue-navy.jpg" alt="" /><span>Navy Hoodie</span></div>
+        <div class="site-merch-item"><img src="assets/jeremy-dean-tee-neon-pink.jpg" alt="" /><span>Neon Pink Tee</span></div>
+      </div>
+      <a href="/merch.html" class="site-btn site-btn--primary">Shop all merch</a>
+    </div>
+  </section>
 
-        <div class="flyer-payment-card">
-          <div class="flyer-form__label">Step 2 · Pay $20</div>
-          <img src="assets/jeremy-souza-venmo-qr.jpg" alt="Venmo QR code for Jeremy Souza" class="flyer-payment-card__qr" loading="lazy" />
-          <p>After you put in your info, scan the QR code or send the <strong>$20</strong> payment to <strong>@Jeremy-Souza-12</strong> to complete the ticket.</p>
-          <a class="flyer-button flyer-button--primary flyer-button--full" href="https://venmo.com/u/Jeremy-Souza-12" target="_blank" rel="noreferrer">Open payment link</a>
-        </div>
-      </section>
+  <section class="site-section site-section--dark">
+    <div class="site-section__head">
+      <p class="site-label">Listen</p>
+      <h2>Music</h2>
+    </div>
+    <div class="site-music">
+      <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer" class="site-music__link">
+        <span class="site-music__icon">SC</span>
+        <span>Listen on SoundCloud</span>
+      </a>
+    </div>
+  </section>
 
-      <footer class="flyer-footer">
-        <span class="flyer-footer__label">Sponsor</span>
-        <a href="https://xcalitoy.com" target="_blank" rel="noreferrer" class="flyer-footer__sponsor-link">
-          <img src="assets/calitoy-sponsor-logo.jpg" alt="Calitoy" class="flyer-footer__sponsor-image flyer-footer__sponsor-image--calitoy" />
-        </a>
-      </footer>
-    </main>
-  </body>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <img src="assets/jeremy-dean-brand-mark.jpg" alt="Jeremy Dean" class="site-footer__logo" />
+      <div class="site-footer__links">
+        <a href="/">Home</a>
+        <a href="/flyer.html">Shows</a>
+        <a href="/merch.html">Merch</a>
+        <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">SoundCloud</a>
+      </div>
+      <p class="site-footer__copy">Jeremy Dean Music. Independent. Ocean Beach, San Diego.</p>
+    </div>
+  </footer>
+
+</main>
+
+</body>
 </html>

@@ -1,0 +1,332 @@
+/* Jeremy Dean site navigation + layout */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(19, 13, 16, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 155, 88, 0.22);
+}
+.site-nav__inner {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  gap: 1rem;
+}
+.site-nav__logo img {
+  height: 44px;
+  width: auto;
+}
+.site-nav__links {
+  display: flex;
+  gap: 1.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.site-nav__links a {
+  color: rgba(242, 223, 194, 0.7);
+  transition: color 0.2s;
+}
+.site-nav__links a:hover {
+  color: #c99b58;
+}
+
+.site-main {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0 0 4rem;
+}
+
+/* Hero */
+.site-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.site-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.site-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.site-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(19, 13, 16, 0.3) 0%, rgba(19, 13, 16, 0.85) 100%);
+}
+.site-hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 2rem;
+}
+.site-hero__kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c99b58;
+  margin-bottom: 0.5rem;
+}
+.site-hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin: 0 0 0.75rem;
+  color: #f2dfc2;
+}
+.site-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(242, 223, 194, 0.82);
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+.site-hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.site-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.15s, background 0.15s;
+}
+.site-btn--primary {
+  background: #c99b58;
+  color: #130d10;
+}
+.site-btn--primary:hover {
+  transform: translateY(-2px);
+  background: #e8c88b;
+}
+.site-btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(201, 155, 88, 0.4);
+  color: #f2dfc2;
+}
+.site-btn--ghost:hover {
+  border-color: #c99b58;
+  color: #c99b58;
+}
+
+/* Sections */
+.site-section {
+  margin-bottom: 4rem;
+}
+.site-section--dark {
+  background: rgba(19, 13, 16, 0.6);
+  border: 1px solid rgba(201, 155, 88, 0.18);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.site-section__head {
+  margin-bottom: 1.5rem;
+}
+.site-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c99b58;
+  margin: 0 0 0.5rem;
+}
+.site-section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  margin: 0;
+  color: #f2dfc2;
+}
+
+/* About */
+.site-about {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+.site-about__text p {
+  color: rgba(242, 223, 194, 0.8);
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+.site-about__logo img {
+  height: 120px;
+  width: auto;
+  border-radius: 8px;
+}
+@media (max-width: 700px) {
+  .site-about {
+    grid-template-columns: 1fr;
+  }
+  .site-about__logo {
+    display: none;
+  }
+}
+
+/* Show card */
+.site-show-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.site-show-card__art img {
+  width: 100%;
+  border-radius: 12px;
+}
+.site-show-strip {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(201, 155, 88, 0.14);
+  font-size: 0.9rem;
+}
+.site-show-strip span {
+  color: rgba(242, 223, 194, 0.6);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.site-show-strip strong {
+  color: #f2dfc2;
+}
+.site-show-card__info .site-btn {
+  margin-top: 1rem;
+}
+@media (max-width: 700px) {
+  .site-show-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Merch preview */
+.site-merch-preview {
+  text-align: center;
+}
+.site-merch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 700px) {
+  .site-merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.site-merch-item {
+  background: rgba(19, 13, 16, 0.5);
+  border: 1px solid rgba(201, 155, 88, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.site-merch-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.site-merch-item span {
+  display: block;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  color: rgba(242, 223, 194, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Music */
+.site-music {
+  text-align: center;
+}
+.site-music__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 14px 28px;
+  background: #c99b58;
+  color: #130d10;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s;
+}
+.site-music__link:hover {
+  transform: translateY(-2px);
+}
+.site-music__icon {
+  background: #130d10;
+  color: #c99b58;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(201, 155, 88, 0.22);
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+.site-footer__inner {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  text-align: center;
+}
+.site-footer__logo {
+  height: 40px;
+  margin: 0 auto 1rem;
+}
+.site-footer__links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.site-footer__links a {
+  font-size: 0.8rem;
+  color: rgba(242, 223, 194, 0.7);
+  transition: color 0.2s;
+}
+.site-footer__links a:hover {
+  color: #c99b58;
+}
+.site-footer__copy {
+  font-size: 0.7rem;
+  color: rgba(242, 223, 194, 0.5);
+}
