@@ -1,0 +1,444 @@
+[
+  {
+    "name": "Jeremy Dean Gold Logo Tote",
+    "id": 463705985,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/367/10457_1582200790.jpg",
+    "variants": [
+      {
+        "id": 10457,
+        "name": "Jeremy Dean Gold Logo Tote / Black / One size",
+        "price": "24.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Gold Logo Hoodie",
+    "id": 463705889,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/294/9228_1769517742.jpg",
+    "variants": [
+      {
+        "id": 9227,
+        "name": "Jeremy Dean Gold Logo Hoodie / Black / S",
+        "price": "52.00"
+      },
+      {
+        "id": 9228,
+        "name": "Jeremy Dean Gold Logo Hoodie / Black / M",
+        "price": "52.00"
+      },
+      {
+        "id": 9229,
+        "name": "Jeremy Dean Gold Logo Hoodie / Black / L",
+        "price": "52.00"
+      },
+      {
+        "id": 9230,
+        "name": "Jeremy Dean Gold Logo Hoodie / Black / XL",
+        "price": "52.00"
+      },
+      {
+        "id": 9231,
+        "name": "Jeremy Dean Gold Logo Hoodie / Black / 2XL",
+        "price": "52.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Sound Waves Tee",
+    "id": 463705854,
+    "thumbnail": null,
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Sound Waves Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Sound Waves Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Sound Waves Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Sound Waves Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Sound Waves Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Calligraphic Tee",
+    "id": 463705821,
+    "thumbnail": null,
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Calligraphic Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Calligraphic Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Calligraphic Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Calligraphic Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Calligraphic Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Sunset Retro Tee",
+    "id": 463705451,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Sunset Retro Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Sunset Retro Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Sunset Retro Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Sunset Retro Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Sunset Retro Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Thin Outline Tee",
+    "id": 463705447,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Thin Outline Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Thin Outline Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Thin Outline Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Thin Outline Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Thin Outline Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean White Monogram Tee",
+    "id": 463705443,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean White Monogram Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean White Monogram Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean White Monogram Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean White Monogram Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean White Monogram Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Silver Gold Tee",
+    "id": 463705441,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Silver Gold Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Silver Gold Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Silver Gold Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Silver Gold Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Silver Gold Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Neon Pink Tee",
+    "id": 463705437,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Neon Pink Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Neon Pink Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Neon Pink Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Neon Pink Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Neon Pink Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Emerald Gold Tee",
+    "id": 463705432,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Emerald Gold Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Emerald Gold Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Emerald Gold Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Emerald Gold Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Emerald Gold Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Teal Logo Tee",
+    "id": 463705430,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Teal Logo Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Teal Logo Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Teal Logo Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Teal Logo Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Teal Logo Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Orange Logo Tee",
+    "id": 463705421,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Orange Logo Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Orange Logo Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Orange Logo Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Orange Logo Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Orange Logo Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Purple Logo Tee",
+    "id": 463705411,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Purple Logo Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Purple Logo Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Purple Logo Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Purple Logo Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Purple Logo Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Dean Gold Logo Tee",
+    "id": 463705408,
+    "thumbnail": "https://files.cdn.printful.com/",
+    "printful_image": "https://files.cdn.printful.com/products/71/4016_1752236278.jpg",
+    "variants": [
+      {
+        "id": 4016,
+        "name": "Jeremy Dean Gold Logo Tee / Black / S",
+        "price": "32.00"
+      },
+      {
+        "id": 4017,
+        "name": "Jeremy Dean Gold Logo Tee / Black / M",
+        "price": "32.00"
+      },
+      {
+        "id": 4018,
+        "name": "Jeremy Dean Gold Logo Tee / Black / L",
+        "price": "32.00"
+      },
+      {
+        "id": 4019,
+        "name": "Jeremy Dean Gold Logo Tee / Black / XL",
+        "price": "32.00"
+      },
+      {
+        "id": 4020,
+        "name": "Jeremy Dean Gold Logo Tee / Black / 2XL",
+        "price": "32.00"
+      }
+    ]
+  }
+]
