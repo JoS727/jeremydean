@@ -137,14 +137,8 @@ a { color: inherit; text-decoration: none; }
 
 <section class="container">
   <div class="merch-pay-section">
-    <h3>Quick Pay Options</h3>
-    <div class="merch-pay-row">
-      <a href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a>
-      <a href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a>
-      <button onclick="copyText('joseph@xcalitoy.com')">ZELLE</button>
-      <a href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a>
-      <button onclick="copyText('0x77A4bFe14Afb738f37c75B3B9310854e60AB3879')">USDC</button>
-    </div>
+    <h3>Printed and shipped on demand</h3>
+    <p style="color: var(--muted); font-size: 0.9rem; max-width: 400px; margin: 0 auto;">All Jeremy Dean merch is printed and fulfilled by Printful. Order through the site, Printful handles production, shipping, and tracking.</p>
   </div>
 </section>
 
@@ -169,11 +163,7 @@ a { color: inherit; text-decoration: none; }
     <h2 class="merch-modal__name" id="modalName"></h2>
     <p class="merch-modal__desc" id="modalDesc"></p>
     <div class="merch-modal__sizes" id="modalSizes"></div>
-    <div class="merch-modal__pay">
-      <button class="merch-pay-btn merch-pay-btn--stripe" id="modalStripe">Buy with Card</button>
-      <button class="merch-pay-btn merch-pay-btn--other" id="modalOther">Other Payment</button>
-    </div>
-    <div class="merch-pay-chips" id="modalChips"></div>
+    <button class="merch-pay-btn merch-pay-btn--stripe" id="modalStripe" style="width: 100%;">Order via Printful</button>
   </div>
 </div>
 
@@ -249,16 +239,15 @@ function openModal(p) {
     btn.onclick = () => { currentSize = s; document.querySelectorAll('.merch-size-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); };
     sizesEl.appendChild(btn);
   });
-  const chipsEl = document.getElementById('modalChips');
-  chipsEl.innerHTML = '<a class="merch-pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a><a class="merch-pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a><span class="merch-pay-chip" onclick="copyText(\'joseph@xcalitoy.com\')">ZELLE</span><a class="merch-pay-chip" href="https://paypal.me/josephcalitoy" target="_blank" rel="noreferrer">PAYPAL</a><span class="merch-pay-chip" onclick="copyText(\'0x77A4bFe14Afb738f37c75B3B9310854e60AB3879\')">USDC</span>';
   const stripeBtn = document.getElementById('modalStripe');
   if (p.slug && STRIPE_PRICES[p.slug]) {
     stripeBtn.onclick = () => createStripeCheckout(p);
     stripeBtn.style.opacity = '1';
-    stripeBtn.textContent = 'Buy with Card';
+    stripeBtn.textContent = 'Order via Printful';
   } else {
-    stripeBtn.onclick = () => alert('Use Cash App, Venmo, or Zelle for this item.');
-    stripeBtn.style.opacity = '0.6';
+    stripeBtn.onclick = () => createPrintfulOrder(p);
+    stripeBtn.style.opacity = '1';
+    stripeBtn.textContent = 'Order via Printful';
   }
   document.getElementById('modal').classList.add('active');
 }
@@ -269,13 +258,21 @@ function createStripeCheckout(product) {
   fetch('https://email-capture.calitoy.workers.dev', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'checkout', priceId, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize } }),
+    body: JSON.stringify({ type: 'checkout', priceId, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize, fulfiller: 'printful' } }),
   }).then(r => r.json()).then(data => { if (data.url) window.location.href = data.url; else alert('Checkout error'); }).catch(err => alert('Network error'));
+}
+
+function createPrintfulOrder(product) {
+  // Route through Stripe checkout with Printful metadata for fulfillment
+  fetch('https://email-capture.calitoy.workers.dev', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'checkout', priceId: product.priceId || null, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize, fulfiller: 'printful', printful_variant: product.printfulVariant || null } }),
+  }).then(r => r.json()).then(data => { if (data.url) window.location.href = data.url; else alert('Checkout error: ' + (data.error || 'please try again')); }).catch(err => alert('Network error'));
 }
 
 function closeModal() { document.getElementById('modal').classList.remove('active'); }
 document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
-function copyText(text) { navigator.clipboard.writeText(text).then(() => alert('Copied: ' + text)); }
 </script>
 
 </body>

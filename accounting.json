@@ -1,166 +1,70 @@
 {
   "artist": "Jeremy Dean",
   "payout_email": "joseph@xcalitoy.com",
+  "fulfillment": "printful",
+  "payment_routing": "stripe_checkout_only",
   "payout_split": {
     "artist_share_pct": 50,
     "platform_share_pct": 50,
-    "notes": "50/50 split between Jeremy Dean and Calitoy platform. Payouts tracked via Stripe metadata[artist]=jeremy_dean"
+    "notes": "50/50 split between Jeremy Dean and Calitoy platform. All orders route through Stripe checkout with Printful fulfillment. No manual payment methods. Stripe metadata[artist]=jeremy_dean, metadata[fulfiller]=printful"
   },
   "stripe_products": [
     {
       "name": "Jeremy Dean Thin Outline Tee",
-      "product_id": "prod_VBJDqjCl3FO5Tr",
       "price_id": "price_1UAwavISCKHDtOuFcqG0OkVR",
-      "amount": 3200,
-      "image": "assets/jeremy-dean-logo-thin-outline.jpg",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
+      "amount": 3200
     },
     {
       "name": "Jeremy Dean White D Monogram Tee",
-      "product_id": "prod_VBJDK2JsXFJE24",
       "price_id": "price_1UAwavISCKHDtOuFz47IIsV5",
-      "amount": 3200,
-      "image": "assets/jeremy-dean-logo-white-d-monogram.jpg",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
+      "amount": 3200
     },
     {
       "name": "Jeremy Dean Sound Waves Tee",
-      "product_id": "prod_VBJDdZnIFkxami",
       "price_id": "price_1UAwawISCKHDtOuFFr0yklc5",
-      "amount": 3200,
-      "image": "assets/jeremy-dean-logo-sound-waves.jpg",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
+      "amount": 3200
     },
     {
       "name": "Jeremy Dean Sunset Retro Tee",
-      "product_id": "prod_VBJDrU5SVkMsUQ",
       "price_id": "price_1UAwawISCKHDtOuFUcYJBmfE",
-      "amount": 3200,
-      "image": "assets/jeremy-dean-logo-sunset-retro.jpg",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
+      "amount": 3200
     },
     {
-      "name": "Jeremy Dean Calligraphic Monogram Tee",
-      "product_id": "prod_VBJDJkZQNutdh0",
+      "name": "Jeremy Dean Calligraphic Tee",
       "price_id": "price_1UAwawISCKHDtOuF89QdNscI",
-      "amount": 3200,
-      "image": "assets/jeremy-dean-logo-calligraphic-monogram.jpg",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
+      "amount": 3200
     },
     {
       "name": "Jeremy Dean Thin Outline Hat",
-      "product_id": "prod_VBJD5ZU22HRSY3",
       "price_id": "price_1UAwaxISCKHDtOuFXJVLIO82",
-      "amount": 2800,
-      "image": "assets/jeremy-dean-logo-thin-outline.jpg",
-      "type": "hat",
-      "sizes": ["One Size"]
+      "amount": 2800
     },
     {
       "name": "Jeremy Dean White D Monogram Hat",
-      "product_id": "prod_VBJDpGmofYchWC",
       "price_id": "price_1UAwaxISCKHDtOuFoCSDnzVf",
-      "amount": 2800,
-      "image": "assets/jeremy-dean-logo-white-d-monogram.jpg",
-      "type": "hat",
-      "sizes": ["One Size"]
+      "amount": 2800
     },
     {
       "name": "Jeremy Dean Sound Waves Hat",
-      "product_id": "prod_VBJD4xBhyjoSuD",
       "price_id": "price_1UAwayISCKHDtOuFLH9wyXOD",
-      "amount": 2800,
-      "image": "assets/jeremy-dean-logo-sound-waves.jpg",
-      "type": "hat",
-      "sizes": ["One Size"]
+      "amount": 2800
     },
     {
       "name": "Jeremy Dean Sunset Retro Hat",
-      "product_id": "prod_VBJDgtzT5rDETV",
       "price_id": "price_1UAwayISCKHDtOuFuOOVsziD",
-      "amount": 2800,
-      "image": "assets/jeremy-dean-logo-sunset-retro.jpg",
-      "type": "hat",
-      "sizes": ["One Size"]
+      "amount": 2800
     },
     {
-      "name": "Jeremy Dean Calligraphic Monogram Hat",
-      "product_id": "prod_VBJD3GYBEm8l8O",
+      "name": "Jeremy Dean Calligraphic Hat",
       "price_id": "price_1UAwazISCKHDtOuFNB3wtrG8",
-      "amount": 2800,
-      "image": "assets/jeremy-dean-logo-calligraphic-monogram.jpg",
-      "type": "hat",
-      "sizes": ["One Size"]
+      "amount": 2800
     }
   ],
-  "previous_products": [
-    {
-      "name": "Jeremy Dean Gold Logo Tee",
-      "image": "assets/jeremy-dean-logo-gold-black.jpg",
-      "price": "$32",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
-    },
-    {
-      "name": "Navy Blue Logo Hoodie",
-      "image": "assets/jeremy-dean-logo-blue-navy.jpg",
-      "price": "$52",
-      "type": "hoodie",
-      "sizes": ["S","M","L","XL","2XL"]
-    },
-    {
-      "name": "Purple Logo Tote",
-      "image": "assets/jeremy-dean-logo-purple-black.jpg",
-      "price": "$24",
-      "type": "tote",
-      "sizes": ["One Size"]
-    },
-    {
-      "name": "Orange Logo Poster",
-      "image": "assets/jeremy-dean-logo-orange-black.jpg",
-      "price": "$18",
-      "type": "poster",
-      "sizes": ["11x17"]
-    },
-    {
-      "name": "Teal Logo Sticker Pack",
-      "image": "assets/jeremy-dean-logo-teal-dark.jpg",
-      "price": "$8",
-      "type": "sticker",
-      "sizes": ["3 Pack"]
-    },
-    {
-      "name": "Emerald Gold Hat",
-      "image": "assets/jeremy-dean-logo-emerald-gold.jpg",
-      "price": "$28",
-      "type": "hat",
-      "sizes": ["One Size"]
-    },
-    {
-      "name": "Neon Pink Logo Tee",
-      "image": "assets/jeremy-dean-logo-neon-pink.jpg",
-      "price": "$32",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
-    },
-    {
-      "name": "Silver Gold Logo Tee",
-      "image": "assets/jeremy-dean-logo-silver-gold.jpg",
-      "price": "$32",
-      "type": "tee",
-      "sizes": ["S","M","L","XL","2XL"]
-    },
-    {
-      "name": "Gold Black Logo Hoodie",
-      "image": "assets/jeremy-dean-logo-gold-black.jpg",
-      "price": "$52",
-      "type": "hoodie",
-      "sizes": ["S","M","L","XL","2XL"]
-    }
-  ]
+  "printful_products": {
+    "store_id": 18518390,
+    "product_count": 14,
+    "product_types": ["Bella+Canvas 3001 Tee (black)", "Bella+Canvas 3719 Hoodie (black)", "Econscious Organic Cotton Tote (black)"],
+    "logo_variants": 11,
+    "notes": "All products created via Printful API. Logos uploaded to GitHub raw URLs and attached to Printful sync products. Printful handles production, shipping, and tracking."
+  }
 }
