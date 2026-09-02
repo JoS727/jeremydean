@@ -247,6 +247,14 @@
   border: 1px solid rgba(201, 155, 88, 0.14);
   border-radius: 10px;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.site-merch-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 155, 88, 0.4);
 }
 .site-merch-item img {
   width: 100%;
