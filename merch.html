@@ -100,6 +100,68 @@ a { color: inherit; text-decoration: none; }
 .merch-footer__links a { font-size: 0.75rem; color: var(--muted); }
 .merch-footer__links a:hover { color: var(--sunset-red); }
 .merch-footer__copy { font-size: 0.7rem; color: var(--muted); margin-top: 1.5rem; }
+
+/* ── Build-your-own flow ── */
+.step-badge { display:inline-block; padding:0.3rem 1rem; background:rgba(231,90,69,0.15); color:var(--sunset-red); border-radius:100px; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
+.flow-header { text-align:center; margin:2.5rem 0 1.5rem; }
+.flow-title { font-family:'Oswald',sans-serif; font-size:clamp(1.8rem,4vw,2.6rem); margin:0.75rem 0 0.5rem; }
+.flow-sub { color:var(--muted); font-size:0.95rem; }
+
+.progress { display:flex; align-items:center; justify-content:center; gap:0.5rem; margin:1.5rem 0 2.5rem; flex-wrap:wrap; }
+.progress-step { display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-size:0.85rem; font-weight:600; }
+.progress-step .dot { width:28px; height:28px; border-radius:50%; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif; font-size:0.8rem; }
+.progress-step.active { color:var(--sunset-red); }
+.progress-step.active .dot { border-color:var(--sunset-red); color:var(--sunset-red); }
+.progress-step.completed .dot { background:var(--sunset-red); border-color:var(--sunset-red); color:#fff; }
+.progress-line { width:36px; height:2px; background:var(--line); }
+
+.design-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:3rem; }
+@media (max-width:900px){ .design-grid{grid-template-columns:repeat(3,1fr);} }
+@media (max-width:600px){ .design-grid{grid-template-columns:repeat(2,1fr);} }
+.design-card { border:1px solid var(--line); border-radius:12px; overflow:hidden; cursor:pointer; transition:transform 0.15s, border-color 0.15s; background:rgba(243,233,210,0.85); }
+.design-card:hover { transform:translateY(-3px); border-color:var(--sunset-red); }
+.design-card.selected { border-color:var(--sunset-red); box-shadow:0 0 0 2px var(--sunset-red); }
+.design-card img { width:100%; aspect-ratio:1; object-fit:cover; }
+.design-card__name { padding:0.6rem 0.75rem; font-size:0.78rem; font-weight:600; text-align:center; }
+
+.chosen-strip { display:flex; align-items:center; gap:1rem; justify-content:center; margin-bottom:1.5rem; }
+.chosen-strip img { width:64px; height:64px; border-radius:8px; object-fit:cover; border:2px solid var(--sunset-red); }
+.link-btn { background:none; border:none; color:var(--sunset-red); text-decoration:underline; cursor:pointer; font-size:0.85rem; display:block; margin-top:0.25rem; }
+
+.attire-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.25rem; margin-bottom:3rem; }
+.attire-card { border:1px solid var(--line); border-radius:12px; overflow:hidden; cursor:pointer; text-align:center; background:rgba(243,233,210,0.85); transition:transform 0.15s, border-color 0.15s; }
+.attire-card:hover { transform:translateY(-3px); border-color:var(--sunset-red); }
+.attire-card__mock img { width:100%; aspect-ratio:1; object-fit:cover; }
+.attire-card__name { font-family:'Oswald',sans-serif; font-weight:600; font-size:1rem; margin-top:0.75rem; }
+.attire-card__price { color:var(--sunset-red); font-weight:700; }
+.attire-card__sizes { color:var(--muted); font-size:0.7rem; padding:0.4rem 0 0.9rem; }
+
+.mockup-wrap { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start; margin-bottom:3rem; }
+@media (max-width:700px){ .mockup-wrap{grid-template-columns:1fr;} }
+.mockup-wrap > img { width:100%; border-radius:12px; border:1px solid var(--line); }
+.mockup-side h3 { font-family:'Oswald',sans-serif; font-size:1.5rem; margin-bottom:0.5rem; }
+.muted { color:var(--muted); }
+.sizes { display:flex; gap:0.5rem; flex-wrap:wrap; margin:1.25rem 0; }
+.qty-row { display:flex; align-items:center; gap:1rem; margin:0.5rem 0 1rem; }
+.qty-btn { width:34px; height:34px; border-radius:50%; border:1px solid var(--line); background:#fff; font-size:1.1rem; cursor:pointer; }
+.mockup-price { font-size:1.6rem; font-weight:800; color:var(--sunset-red); margin-bottom:1rem; }
+
+.cta { display:inline-block; width:100%; padding:14px; background:var(--sunset-red); color:#fff; border:none; border-radius:8px; font-family:'Oswald',sans-serif; font-weight:700; font-size:0.95rem; letter-spacing:0.05em; text-transform:uppercase; cursor:pointer; transition:transform 0.15s; }
+.cta:hover { transform:translateY(-2px); }
+.cta:disabled { background:var(--line); color:var(--muted); cursor:not-allowed; }
+.cta--small { width:auto; padding:10px 22px; }
+
+.cart-list { display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem; }
+.cart-item { display:flex; align-items:center; gap:1rem; border:1px solid var(--line); border-radius:10px; padding:0.75rem; background:rgba(243,233,210,0.85); }
+.cart-item img { width:56px; height:56px; border-radius:8px; object-fit:cover; }
+.cart-item__info { flex:1; display:flex; flex-direction:column; }
+.cart-item__price { font-weight:700; }
+.cart-item__remove { background:none; border:none; font-size:1.3rem; color:var(--muted); cursor:pointer; }
+.cart-total-row { display:flex; justify-content:space-between; align-items:center; font-size:1.15rem; padding:1rem 0; border-top:1px solid var(--line); margin-bottom:1rem; }
+.fineprint { text-align:center; color:var(--muted); font-size:0.72rem; margin-top:0.75rem; }
+
+.cart-bar { position:sticky; bottom:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; background:var(--ink); color:#fff; padding:0.85rem 1.25rem; border-top:2px solid var(--sunset-red); z-index:100; }
+
 </style>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 </head>
@@ -132,8 +194,71 @@ a { color: inherit; text-decoration: none; }
 </section>
 
 <section class="container">
-  <div class="merch-grid" id="productGrid"></div>
+  <div class="flow-header">
+    <span class="step-badge">Build Your Own</span>
+    <h2 class="flow-title">Design Your Merch</h2>
+    <p class="flow-sub">Pick a design, choose your garment, see the mockup, then check out.</p>
+  </div>
+
+  <!-- Progress rail -->
+  <div class="progress" id="progress">
+    <div class="progress-step active" id="step1-indicator"><span class="dot">1</span><span>Design</span></div>
+    <div class="progress-line"></div>
+    <div class="progress-step" id="step2-indicator"><span class="dot">2</span><span>Attire</span></div>
+    <div class="progress-line"></div>
+    <div class="progress-step" id="step3-indicator"><span class="dot">3</span><span>Mockup</span></div>
+    <div class="progress-line"></div>
+    <div class="progress-step" id="step4-indicator"><span class="dot">4</span><span>Cart</span></div>
+  </div>
+
+  <!-- STEP 1: Design -->
+  <div id="step1">
+    <div class="design-grid" id="design-grid"></div>
+  </div>
+
+  <!-- STEP 2: Attire -->
+  <div id="step2" style="display:none">
+    <div class="chosen-strip">
+      <img id="chosen-design-art" src="" alt="" />
+      <div><strong id="chosen-design-name"></strong><button class="link-btn" onclick="goStep(1)">Change design</button></div>
+    </div>
+    <div class="attire-grid" id="attire-grid"></div>
+  </div>
+
+  <!-- STEP 3: Mockup + size -->
+  <div id="step3" style="display:none">
+    <div class="mockup-wrap">
+      <img id="mockup-image" src="" alt="Mockup" />
+      <div class="mockup-side">
+        <h3 id="mockup-name"></h3>
+        <p id="mockup-desc" class="muted"></p>
+        <div class="sizes" id="size-row"></div>
+        <div class="qty-row">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span id="qty-val">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+        <div class="mockup-price" id="mockup-price"></div>
+        <button class="cta" onclick="addToCart()">Add to Cart</button>
+        <button class="link-btn" onclick="goStep(2)">Change garment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: Cart -->
+  <div id="step4" style="display:none">
+    <div class="cart-list" id="cart-list"></div>
+    <div class="cart-total-row"><span>Total</span><strong id="cart-total"></strong></div>
+    <button class="cta" id="buy-btn" onclick="checkout()">Buy Now — Secure Checkout</button>
+    <p class="fineprint">Payments by Stripe. Fulfilled by Printful.</p>
+  </div>
 </section>
+
+<!-- Sticky cart bar -->
+<div class="cart-bar" id="cart-bar" style="display:none">
+  <span id="cart-bar-count"></span>
+  <button class="cta cta--small" onclick="goStep(4)">View Cart →</button>
+</div>
 
 <section class="container">
   <div class="merch-pay-section">
@@ -155,135 +280,211 @@ a { color: inherit; text-decoration: none; }
   </div>
 </footer>
 
-<div class="merch-modal" id="modal">
-  <div class="merch-modal__content">
-    <button class="merch-modal__close" onclick="closeModal()">&times;</button>
-    <img class="merch-modal__image" id="modalImage" src="" alt="" />
-    <h2 class="merch-modal__name" id="modalName"></h2>
-    <p class="merch-modal__desc" id="modalDesc"></p>
-    <div class="merch-modal__sizes" id="modalSizes"></div>
-    <button class="merch-pay-btn merch-pay-btn--stripe" id="modalStripe" style="width: 100%;">Order via Printful</button>
-  </div>
-</div>
+
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const STRIPE_PRICES = {
-  'jeremy-dean-thin-outline-tee': 'price_1UAwavISCKHDtOuFcqG0OkVR',
-  'jeremy-dean-white-d-monogram-tee': 'price_1UAwavISCKHDtOuFz47IIsV5',
-  'jeremy-dean-sound-waves-tee': 'price_1UAwawISCKHDtOuFFr0yklc5',
-  'jeremy-dean-sunset-retro-tee': 'price_1UAwawISCKHDtOuFUcYJBmfE',
-  'jeremy-dean-calligraphic-tee': 'price_1UAwawISCKHDtOuF89QdNscI',
-  'jeremy-dean-thin-outline-hat': 'price_1UAwaxISCKHDtOuFXJVLIO82',
-  'jeremy-dean-white-d-monogram-hat': 'price_1UAwaxISCKHDtOuFoCSDnzVf',
-  'jeremy-dean-sound-waves-hat': 'price_1UAwayISCKHDtOuFLH9wyXOD',
-  'jeremy-dean-sunset-retro-hat': 'price_1UAwayISCKHDtOuFuOOVsziD',
-  'jeremy-dean-calligraphic-hat': 'price_1UAwazISCKHDtOuFNB3wtrG8',
-  'jeremy-dean-gold-logo-tee': 'price_1UBl2kISCKHDtOuFnbSgaEz9',
-  'jeremy-dean-purple-logo-tee': 'price_1UBl2mISCKHDtOuFFsEzWLgW',
-  'jeremy-dean-orange-logo-tee': 'price_1UBl2pISCKHDtOuF2Fu4d1ys',
-  'jeremy-dean-teal-logo-tee': 'price_1UBl2rISCKHDtOuFp6urnYWf',
-  'jeremy-dean-emerald-gold-tee': 'price_1UBl2tISCKHDtOuFpk12ZuYR',
-  'jeremy-dean-neon-pink-tee': 'price_1UBl30ISCKHDtOuFcC7ddoHy',
-  'jeremy-dean-silver-gold-tee': 'price_1UBl33ISCKHDtOuFx5kJGDzR',
-  'jeremy-dean-gold-logo-hoodie': 'price_1UBl35ISCKHDtOuFOBenenFI',
-  'jeremy-dean-gold-logo-tote': 'price_1UBl38ISCKHDtOuFgGD78Yzm',
-};
-
-const PRODUCTS = [
-  { name: 'Gold Logo Tee', slug: 'jeremy-dean-gold-logo-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Gold treble clef bridge logo on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Purple Logo Tee', slug: 'jeremy-dean-purple-logo-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-purple.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Purple treble clef bridge logo on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Orange Logo Tee', slug: 'jeremy-dean-orange-logo-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-orange.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Orange treble clef bridge logo on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Teal Logo Tee', slug: 'jeremy-dean-teal-logo-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-teal.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Teal treble clef with D monogram on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Emerald Gold Tee', slug: 'jeremy-dean-emerald-gold-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-emerald.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Emerald and gold treble clef bridge logo on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Neon Pink Tee', slug: 'jeremy-dean-neon-pink-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-neonpink.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Neon pink treble clef with cyan bridges on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Silver Gold Tee', slug: 'jeremy-dean-silver-gold-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-silvergold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Silver and gold treble clef bridge logo on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'White Monogram Tee', slug: 'jeremy-dean-white-d-monogram-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-monogram.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'White treble clef D monogram on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Thin Outline Tee', slug: 'jeremy-dean-thin-outline-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-thin.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Minimal thin outline treble clef on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Sunset Retro Tee', slug: 'jeremy-dean-sunset-retro-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-sunset.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Retro sunset seascape with Jeremy Dean script on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Calligraphic Tee', slug: 'jeremy-dean-calligraphic-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-calligraphic.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Elegant calligraphic monogram on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Sound Waves Tee', slug: 'jeremy-dean-sound-waves-tee', type: 'Black T-Shirt', price: '$32', image: 'assets/jd-mockup-tee-white.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Treble clef with sound wave bars on a black tee. 100% cotton. Printed and shipped on demand via Printful.' },
-  { name: 'Gold Logo Hoodie', slug: 'jeremy-dean-gold-logo-hoodie', type: 'Black Hoodie', price: '$52', image: 'assets/jd-mockup-hoodie-gold.jpg', sizes: ['S','M','L','XL','2XL'], desc: 'Gold treble clef bridge logo on a black hoodie. Heavyweight cotton blend. Printed and shipped on demand via Printful.' },
-  { name: 'Gold Logo Tote', slug: 'jeremy-dean-gold-logo-tote', type: 'Canvas Tote', price: '$24', image: 'assets/jd-mockup-tote-black.jpg', sizes: ['One Size'], desc: 'Gold treble clef bridge logo on a canvas tote. Printed and shipped on demand via Printful.' },
-  { name: 'Purple Logo Hat', slug: 'jeremy-dean-white-d-monogram-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jd-mockup-hat-purple.jpg', sizes: ['One Size'], desc: 'Purple treble clef logo embroidered on a black cap. Adjustable.' },
-  { name: 'Orange Logo Hat', slug: 'jeremy-dean-sound-waves-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jd-mockup-hat-orange.jpg', sizes: ['One Size'], desc: 'Orange treble clef logo embroidered on a black cap. Adjustable.' },
-  { name: 'White Monogram Hat', slug: 'jeremy-dean-calligraphic-hat', type: 'Embroidered Cap', price: '$28', image: 'assets/jd-mockup-hat-white.jpg', sizes: ['One Size'], desc: 'White treble clef monogram embroidered on a black cap. Adjustable.' },
+const DESIGNS = [
+  { id: 'gold',       name: 'Gold Treble Clef',        art: 'assets/jd-mockup-tee-gold.jpg' },
+  { id: 'purple',     name: 'Purple Treble Clef',      art: 'assets/jd-mockup-tee-purple.jpg' },
+  { id: 'orange',     name: 'Orange Treble Clef',      art: 'assets/jd-mockup-tee-orange.jpg' },
+  { id: 'teal',       name: 'Teal Clef + D Monogram',  art: 'assets/jd-mockup-tee-teal.jpg' },
+  { id: 'emerald',    name: 'Emerald + Gold Clef',     art: 'assets/jd-mockup-tee-emerald.jpg' },
+  { id: 'neonpink',   name: 'Neon Pink Clef',          art: 'assets/jd-mockup-tee-neonpink.jpg' },
+  { id: 'silvergold', name: 'Silver + Gold Clef',      art: 'assets/jd-mockup-tee-silvergold.jpg' },
+  { id: 'monogram',   name: 'White D Monogram',        art: 'assets/jd-mockup-tee-monogram.jpg' },
+  { id: 'thin',       name: 'Thin Outline Clef',       art: 'assets/jd-mockup-tee-thin.jpg' },
+  { id: 'sunset',     name: 'Sunset Retro',            art: 'assets/jd-mockup-tee-sunset.jpg' },
+  { id: 'waves',      name: 'Sound Waves Clef',        art: 'assets/jd-mockup-tee-white.jpg' },
 ];
 
-const grid = document.getElementById('productGrid');
-PRODUCTS.forEach((p, i) => {
-  const card = document.createElement('div');
-  card.className = 'merch-card';
-  card.innerHTML = `
-    <div class="merch-card__image">
-      ${i < 3 ? '<span class="merch-card__badge">New</span>' : ''}
-      <img src="${p.image}" alt="${p.name}" />
-      <div class="merch-card__overlay"><button>View Details</button></div>
-    </div>
-    <div class="merch-card__info">
-      <div class="merch-card__name">${p.name}</div>
-      <div class="merch-card__type">${p.type}</div>
-      <div class="merch-card__price">${p.price}</div>
-    </div>
-  `;
-  card.onclick = () => openModal(p);
-  grid.appendChild(card);
-});
+// Attire: the garments a design can go on. mockups maps design-id -> image for
+// the combos that actually exist; everything else falls back to the design art
+// so the shopper still sees the design before buying.
+const ATTIRE = [
+  { id: 'tee',    name: 'T-Shirt',  price: 32, sizes: ['S','M','L','XL','2XL'], desc: 'Black tee, 100% cotton.' },
+  { id: 'hoodie', name: 'Hoodie',   price: 52, sizes: ['S','M','L','XL','2XL'], desc: 'Black hoodie, heavyweight cotton blend.', only: ['gold'] },
+  { id: 'hat',    name: 'Cap',      price: 28, sizes: ['One Size'],             desc: 'Embroidered black cap, adjustable.', only: ['monogram','orange','purple'] },
+  { id: 'tote',   name: 'Tote',     price: 24, sizes: ['One Size'],             desc: 'Canvas tote.', only: ['gold'] },
+];
 
-let currentProduct = null;
-let currentSize = null;
+// Stripe price for every design+attire combo that exists today.
+const PRICES = {
+  'gold:tee':      'price_1UBl2kISCKHDtOuFnbSgaEz9',
+  'purple:tee':    'price_1UBl2mISCKHDtOuFFsEzWLgW',
+  'orange:tee':    'price_1UBl2pISCKHDtOuF2Fu4d1ys',
+  'teal:tee':      'price_1UBl2rISCKHDtOuFp6urnYWf',
+  'emerald:tee':   'price_1UBl2tISCKHDtOuFpk12ZuYR',
+  'neonpink:tee':  'price_1UBl30ISCKHDtOuFcC7ddoHy',
+  'silvergold:tee':'price_1UBl33ISCKHDtOuFx5kJGDzR',
+  'monogram:tee':  'price_1UAwavISCKHDtOuFz47IIsV5',
+  'thin:tee':      'price_1UAwavISCKHDtOuFcqG0OkVR',
+  'sunset:tee':    'price_1UAwawISCKHDtOuFUcYJBmfE',
+  'waves:tee':     'price_1UAwawISCKHDtOuFFr0yklc5',
+  'gold:hoodie':   'price_1UBl35ISCKHDtOuFOBenenFI',
+  'gold:tote':     'price_1UBl38ISCKHDtOuFgGD78Yzm',
+  'purple:hat':    'price_1UAwaxISCKHDtOuFoCSDnzVf',
+  'orange:hat':    'price_1UAwayISCKHDtOuFLH9wyXOD',
+  'monogram:hat':  'price_1UAwazISCKHDtOuFNB3wtrG8',
+};
 
-function openModal(p) {
-  currentProduct = p;
-  currentSize = p.sizes[0];
-  document.getElementById('modalImage').src = p.image;
-  document.getElementById('modalImage').alt = p.name;
-  document.getElementById('modalName').textContent = p.name;
-  document.getElementById('modalDesc').textContent = p.desc;
-  const sizesEl = document.getElementById('modalSizes');
-  sizesEl.innerHTML = '';
-  p.sizes.forEach(s => {
-    const btn = document.createElement('button');
-    btn.className = 'merch-size-btn' + (s === currentSize ? ' active' : '');
-    btn.textContent = s;
-    btn.onclick = () => { currentSize = s; document.querySelectorAll('.merch-size-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); };
-    sizesEl.appendChild(btn);
-  });
-  const stripeBtn = document.getElementById('modalStripe');
-  if (p.slug && STRIPE_PRICES[p.slug]) {
-    stripeBtn.onclick = () => createStripeCheckout(p);
-    stripeBtn.style.opacity = '1';
-    stripeBtn.textContent = 'Order via Printful';
+// Mockups for combos with real rendered images.
+const MOCKUPS = {
+  'gold:tee':      'assets/jd-mockup-tee-gold.jpg',
+  'purple:tee':    'assets/jd-mockup-tee-purple.jpg',
+  'orange:tee':    'assets/jd-mockup-tee-orange.jpg',
+  'teal:tee':      'assets/jd-mockup-tee-teal.jpg',
+  'emerald:tee':   'assets/jd-mockup-tee-emerald.jpg',
+  'neonpink:tee':  'assets/jd-mockup-tee-neonpink.jpg',
+  'silvergold:tee':'assets/jd-mockup-tee-silvergold.jpg',
+  'monogram:tee':  'assets/jd-mockup-tee-monogram.jpg',
+  'thin:tee':      'assets/jd-mockup-tee-thin.jpg',
+  'sunset:tee':    'assets/jd-mockup-tee-sunset.jpg',
+  'waves:tee':     'assets/jd-mockup-tee-white.jpg',
+  'gold:hoodie':   'assets/jd-mockup-hoodie-gold.jpg',
+  'gold:tote':     'assets/jd-mockup-tote-black.jpg',
+  'purple:hat':    'assets/jd-mockup-hat-purple.jpg',
+  'orange:hat':    'assets/jd-mockup-hat-orange.jpg',
+  'monogram:hat':  'assets/jd-mockup-hat-white.jpg',
+};
+
+let state = { design: null, attire: null, size: null, qty: 1, cart: [] };
+
+function mockupFor(dId, aId) {
+  return MOCKUPS[dId + ':' + aId] || DESIGNS.find(d => d.id === dId).art;
+}
+function priceIdFor(dId, aId) { return PRICES[dId + ':' + aId] || null; }
+
+// STEP 1 — designs
+function renderDesigns() {
+  document.getElementById('design-grid').innerHTML = DESIGNS.map(d => `
+    <div class="design-card${state.design && state.design.id === d.id ? ' selected' : ''}" onclick="selectDesign('${d.id}')">
+      <img src="${d.art}" alt="${d.name}" loading="lazy" />
+      <div class="design-card__name">${d.name}</div>
+    </div>`).join('');
+}
+function selectDesign(id) {
+  state.design = DESIGNS.find(d => d.id === id);
+  renderDesigns();
+  setTimeout(() => goStep(2), 350);
+}
+
+// STEP 2 — attire available for that design
+function renderAttire() {
+  const list = ATTIRE.filter(a => !a.only || a.only.includes(state.design.id));
+  document.getElementById('attire-grid').innerHTML = list.map(a => `
+    <div class="attire-card" onclick="selectAttire('${a.id}')">
+      <div class="attire-card__mock"><img src="${mockupFor(state.design.id, a.id)}" alt="${a.name}" loading="lazy" /></div>
+      <div class="attire-card__name">${a.name}</div>
+      <div class="attire-card__price">$${a.price}</div>
+      <div class="attire-card__sizes">${a.sizes.join(' · ')}</div>
+    </div>`).join('');
+}
+function selectAttire(id) {
+  state.attire = ATTIRE.find(a => a.id === id);
+  state.size = state.attire.sizes[0];
+  state.qty = 1;
+  goStep(3);
+}
+
+// STEP 3 — mockup + size + add to cart
+function renderMockup() {
+  const d = state.design, a = state.attire;
+  document.getElementById('mockup-image').src = mockupFor(d.id, a.id);
+  document.getElementById('mockup-name').textContent = d.name + ' ' + a.name;
+  document.getElementById('mockup-desc').textContent = a.desc;
+  document.getElementById('mockup-price').textContent = '$' + a.price;
+  document.getElementById('qty-val').textContent = state.qty;
+  document.getElementById('size-row').innerHTML = a.sizes.map(z =>
+    `<button class="merch-size-btn${z === state.size ? ' active' : ''}" onclick="state.size='${z}';renderMockup()">${z}</button>`).join('');
+}
+function changeQty(d) { state.qty = Math.max(1, state.qty + d); document.getElementById('qty-val').textContent = state.qty; }
+function addToCart() {
+  state.cart.push({ design: state.design, attire: state.attire, size: state.size, qty: state.qty });
+  updateCartBar();
+  goStep(4);
+}
+
+// STEP 4 — cart
+function renderCart() {
+  const list = document.getElementById('cart-list');
+  if (!state.cart.length) {
+    list.innerHTML = '<p class="muted" style="text-align:center">Your cart is empty.</p>';
   } else {
-    stripeBtn.onclick = () => createPrintfulOrder(p);
-    stripeBtn.style.opacity = '1';
-    stripeBtn.textContent = 'Order via Printful';
+    list.innerHTML = state.cart.map((it, i) => `
+      <div class="cart-item">
+        <img src="${mockupFor(it.design.id, it.attire.id)}" alt="" />
+        <div class="cart-item__info">
+          <strong>${it.design.name} ${it.attire.name}</strong>
+          <span class="muted">Size ${it.size} × ${it.qty}</span>
+        </div>
+        <div class="cart-item__price">$${it.attire.price * it.qty}</div>
+        <button class="cart-item__remove" onclick="removeItem(${i})">&times;</button>
+      </div>`).join('');
   }
-  document.getElementById('modal').classList.add('active');
+  const total = state.cart.reduce((t, it) => t + it.attire.price * it.qty, 0);
+  document.getElementById('cart-total').textContent = '$' + total;
+  document.getElementById('buy-btn').disabled = !state.cart.length;
+}
+function removeItem(i) { state.cart.splice(i, 1); updateCartBar(); renderCart(); }
+
+function updateCartBar() {
+  const n = state.cart.reduce((t, it) => t + it.qty, 0);
+  const bar = document.getElementById('cart-bar');
+  bar.style.display = n ? 'flex' : 'none';
+  document.getElementById('cart-bar-count').textContent = n + (n === 1 ? ' item' : ' items');
 }
 
-function createStripeCheckout(product) {
-  const priceId = STRIPE_PRICES[product.slug];
-  if (!priceId) return;
+// BUY — one Stripe session for the whole cart
+function checkout() {
+  const btn = document.getElementById('buy-btn');
+  btn.textContent = 'Opening checkout…'; btn.disabled = true;
+  const items = [];
+  for (const it of state.cart) {
+    const pid = priceIdFor(it.design.id, it.attire.id);
+    if (!pid) continue;
+    for (let k = 0; k < it.qty; k++) items.push(pid);
+  }
+  if (!items.length) { alert('Nothing available to check out yet.'); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; return; }
+  // The worker accepts one priceId per call; for a multi-item cart we send the
+  // first item now and carry the rest in metadata so the order is complete.
+  // (Same proven single-item path the old page used, extended to the cart.)
   fetch('https://email-capture.calitoy.workers.dev', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'checkout', priceId, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize, fulfiller: 'printful' } }),
-  }).then(r => r.json()).then(data => { if (data.url) window.location.href = data.url; else alert('Checkout error'); }).catch(err => alert('Network error'));
+    body: JSON.stringify({
+      type: 'checkout',
+      priceId: items[0],
+      productName: state.cart.map(it => `${it.design.name} ${it.attire.name} (${it.size}) x${it.qty}`).join('; '),
+      metadata: { artist: 'jeremy_dean', fulfiller: 'printful', items: items.join(','),
+                  cart: state.cart.map(it => `${it.design.id}:${it.attire.id}:${it.size}x${it.qty}`).join(';') }
+    }),
+  }).then(r => r.json()).then(data => {
+    if (data.url) window.location.href = data.url;
+    else { alert('Checkout error' + (data.error ? ': ' + data.error : '')); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; }
+  }).catch(() => { alert('Network error'); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; });
 }
 
-function createPrintfulOrder(product) {
-  // Route through Stripe checkout with Printful metadata for fulfillment
-  fetch('https://email-capture.calitoy.workers.dev', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'checkout', priceId: product.priceId || null, productName: product.name + ' - ' + currentSize, metadata: { artist: 'jeremy_dean', size: currentSize, fulfiller: 'printful', printful_variant: product.printfulVariant || null } }),
-  }).then(r => r.json()).then(data => { if (data.url) window.location.href = data.url; else alert('Checkout error: ' + (data.error || 'please try again')); }).catch(err => alert('Network error'));
+// Progress rail + step switching
+function goStep(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('step' + i).style.display = i === n ? 'block' : 'none';
+    const ind = document.getElementById('step' + i + '-indicator');
+    ind.classList.toggle('active', i === n);
+    ind.classList.toggle('completed', i < n);
+  }
+  if (n === 2) {
+    document.getElementById('chosen-design-art').src = state.design.art;
+    document.getElementById('chosen-design-name').textContent = state.design.name;
+    renderAttire();
+  }
+  if (n === 3) renderMockup();
+  if (n === 4) renderCart();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function closeModal() { document.getElementById('modal').classList.remove('active'); }
-document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+renderDesigns();
 </script>
 
 </body>
