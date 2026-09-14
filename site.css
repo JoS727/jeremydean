@@ -338,3 +338,64 @@
   font-size: 0.7rem;
   color: rgba(242, 223, 194, 0.5);
 }
+
+/* Payment trust strip */
+.site-trust {
+  background: rgba(19, 13, 16, 0.6);
+  border-top: 1px solid rgba(201, 155, 88, 0.18);
+  border-bottom: 1px solid rgba(201, 155, 88, 0.18);
+  padding: 2rem 1rem;
+}
+.site-trust__inner {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.site-trust__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.site-trust__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f2dfc2;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.site-trust__badge svg { color: #c99b58; flex-shrink: 0; }
+.site-trust__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.site-trust__card {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(201, 155, 88, 0.35);
+  border-radius: 6px;
+  background: rgba(201, 155, 88, 0.06);
+  color: rgba(242, 223, 194, 0.9);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.site-trust__note {
+  color: rgba(242, 223, 194, 0.55);
+  font-size: 0.75rem;
+  margin: 0;
+}
+@media (max-width: 560px) {
+  .site-trust__badges { gap: 1rem; }
+  .site-trust__badge { font-size: 0.72rem; }
+}
