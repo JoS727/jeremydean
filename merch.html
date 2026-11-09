@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Jeremy Dean Merch | Official</title>
-<meta name="description" content="Official Jeremy Dean merchandise. Shirts, hoodies, hats, totes, and more. 11 logo variants across 17 products. Printed and shipped on demand." />
+<meta name="description" content="Official Jeremy Dean merchandise. Shirts, hoodies, hats, totes, and more. Logo collections across tees, hoodies, caps and totes. Printed and shipped on demand." />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Jeremy Dean Merch | Official" />
 <meta property="og:description" content="Official Jeremy Dean merchandise. 11 logo variants. Printed and shipped on demand." />
@@ -164,10 +164,12 @@ a { color: inherit; text-decoration: none; }
 
 </style>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<link rel="stylesheet" href="site.css" />
 </head>
 <body>
+<a class="skip-link" href="#collection">Skip to collection</a>
 
-<link rel="stylesheet" href="site.css" />
+
 <header class="site-nav">
   <div class="site-nav__inner">
     <a href="/" class="site-nav__logo">
@@ -175,7 +177,7 @@ a { color: inherit; text-decoration: none; }
     </a>
     <nav class="site-nav__links">
       <a href="/">Home</a>
-      <a href="/merch.html">Merch</a>
+      <a href="/merch.html" aria-current="page">Merch</a>
       <a href="https://on.soundcloud.com/svPY4LJOPZWUl74EOf" target="_blank" rel="noreferrer">Music</a>
     </nav>
   </div>
@@ -184,20 +186,22 @@ a { color: inherit; text-decoration: none; }
 <section class="merch-hero">
   <div class="container">
     <h1>JEREMY DEAN MERCH</h1>
-    <p>11 logo variants across 17 products. Shirts, hoodies, hats, and totes. Designed by Jeremy Dean. Printed and shipped on demand.</p>
+    <p>Logo collections across tees, hoodies, caps and totes. Shirts, hoodies, hats, and totes. Designed by Jeremy Dean. Printed and shipped on demand.</p>
     <div class="merch-hero__count">
-      <div class="merch-hero__stat"><strong>11</strong><span>Logo Variants</span></div>
-      <div class="merch-hero__stat"><strong>17</strong><span>Products</span></div>
+      <div class="merch-hero__stat"><strong id="design-count">11</strong><span>Designs</span></div>
+      <div class="merch-hero__stat"><strong id="product-count">16</strong><span>Styles</span></div>
       <div class="merch-hero__stat"><strong>50/50</strong><span>Artist Split</span></div>
     </div>
   </div>
 </section>
 
 <section class="container">
-  <div class="flow-header">
+  <div class="flow-header" id="collection">
     <span class="step-badge">Build Your Own</span>
     <h2 class="flow-title">Design Your Merch</h2>
-    <p class="flow-sub">Pick a design, choose your garment, see the mockup, then check out.</p>
+    <p class="flow-sub">Pick your design, choose a piece, and select your size.</p>
+    <p class="fineprint">One piece per checkout. Complete your order before choosing another.</p>
+    <p id="shop-status" class="shop-status" role="status" aria-live="polite"></p>
   </div>
 
   <!-- Progress rail -->
@@ -233,7 +237,7 @@ a { color: inherit; text-decoration: none; }
         <h3 id="mockup-name"></h3>
         <p id="mockup-desc" class="muted"></p>
         <div class="sizes" id="size-row"></div>
-        <div class="qty-row">
+        <div class="qty-row" hidden style="display:none">
           <button class="qty-btn" onclick="changeQty(-1)">−</button>
           <span id="qty-val">1</span>
           <button class="qty-btn" onclick="changeQty(1)">+</button>
@@ -248,9 +252,9 @@ a { color: inherit; text-decoration: none; }
   <!-- STEP 4: Cart -->
   <div id="step4" style="display:none">
     <div class="cart-list" id="cart-list"></div>
-    <div class="cart-total-row"><span>Total</span><strong id="cart-total"></strong></div>
+    <div class="cart-total-row"><span>Item subtotal</span><strong id="cart-total"></strong></div>
     <button class="cta" id="buy-btn" onclick="checkout()">Buy Now — Secure Checkout</button>
-    <p class="fineprint">Payments by Stripe. Fulfilled by Printful.</p>
+    <p class="fineprint">One piece per checkout. Review shipping, taxes and your final total before paying.</p>
   </div>
 </section>
 
@@ -359,10 +363,10 @@ function priceIdFor(dId, aId) { return PRICES[dId + ':' + aId] || null; }
 // STEP 1 — designs
 function renderDesigns() {
   document.getElementById('design-grid').innerHTML = DESIGNS.map(d => `
-    <div class="design-card${state.design && state.design.id === d.id ? ' selected' : ''}" onclick="selectDesign('${d.id}')">
+    <button type="button" class="design-card${state.design && state.design.id === d.id ? ' selected' : ''}" onclick="selectDesign('${d.id}')">
       <img src="${d.art}" alt="${d.name}" loading="lazy" />
-      <div class="design-card__name">${d.name}</div>
-    </div>`).join('');
+      <span class="design-card__name">${d.name}</span>
+    </button>`).join('');
 }
 function selectDesign(id) {
   state.design = DESIGNS.find(d => d.id === id);
@@ -374,12 +378,12 @@ function selectDesign(id) {
 function renderAttire() {
   const list = ATTIRE.filter(a => !a.only || a.only.includes(state.design.id));
   document.getElementById('attire-grid').innerHTML = list.map(a => `
-    <div class="attire-card" onclick="selectAttire('${a.id}')">
+    <button type="button" class="attire-card" onclick="selectAttire('${a.id}')">
       <div class="attire-card__mock"><img src="${mockupFor(state.design.id, a.id)}" alt="${a.name}" loading="lazy" /></div>
       <div class="attire-card__name">${a.name}</div>
       <div class="attire-card__price">$${a.price}</div>
       <div class="attire-card__sizes">${a.sizes.join(' · ')}</div>
-    </div>`).join('');
+    </button>`).join('');
 }
 function selectAttire(id) {
   state.attire = ATTIRE.find(a => a.id === id);
@@ -399,8 +403,12 @@ function renderMockup() {
   document.getElementById('size-row').innerHTML = a.sizes.map(z =>
     `<button class="merch-size-btn${z === state.size ? ' active' : ''}" onclick="state.size='${z}';renderMockup()">${z}</button>`).join('');
 }
-function changeQty(d) { state.qty = Math.max(1, state.qty + d); document.getElementById('qty-val').textContent = state.qty; }
+function changeQty() { state.qty = 1; document.getElementById('qty-val').textContent = 1; }
 function addToCart() {
+  if (state.cart.length) { shopStatus('Complete or remove the piece already in your cart before adding another.'); goStep(4); return; }
+  if (!state.design || !state.attire || !state.attire.sizes.includes(state.size) || !priceIdFor(state.design.id, state.attire.id)) { shopStatus('Choose an available design, garment and size.'); return; }
+  state.qty = 1;
+  shopStatus('');
   state.cart.push({ design: state.design, attire: state.attire, size: state.size, qty: state.qty });
   updateCartBar();
   goStep(4);
@@ -437,33 +445,44 @@ function updateCartBar() {
 }
 
 // BUY — one Stripe session for the whole cart
-function checkout() {
+function shopStatus(message) {
+  document.getElementById('shop-status').textContent = message;
+}
+async function checkout() {
+  if (state.cart.length !== 1 || state.cart[0].qty !== 1) {
+    shopStatus('Please check out with one piece at a time.');
+    return;
+  }
+  const it = state.cart[0];
+  const priceId = priceIdFor(it.design.id, it.attire.id);
+  if (!priceId || !it.attire.sizes.includes(it.size)) {
+    shopStatus('This selection is unavailable. Please choose another.');
+    return;
+  }
   const btn = document.getElementById('buy-btn');
   btn.textContent = 'Opening checkout…'; btn.disabled = true;
-  const items = [];
-  for (const it of state.cart) {
-    const pid = priceIdFor(it.design.id, it.attire.id);
-    if (!pid) continue;
-    for (let k = 0; k < it.qty; k++) items.push(pid);
+  shopStatus('');
+  try {
+    const response = await fetch('https://email-capture.calitoy.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'checkout', priceId,
+        productName: `${it.design.name} ${it.attire.name} (${it.size}) x1`,
+        metadata: { artist: 'jeremy_dean', fulfiller: 'printful', items: priceId,
+          cart: `${it.design.id}:${it.attire.id}:${it.size}x1` }
+      })
+    });
+    if (!response.ok) throw new Error('checkout unavailable');
+    const data = await response.json();
+    const destination = new URL(data.url);
+    if (destination.protocol !== 'https:' || destination.hostname !== 'checkout.stripe.com') throw new Error('invalid checkout URL');
+    window.location.href = destination.href;
+  } catch {
+    shopStatus('Checkout could not open. Your selection is still here; please try again.');
+    btn.textContent = 'Buy Now — Secure Checkout';
+    btn.disabled = false;
   }
-  if (!items.length) { alert('Nothing available to check out yet.'); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; return; }
-  // The worker accepts one priceId per call; for a multi-item cart we send the
-  // first item now and carry the rest in metadata so the order is complete.
-  // (Same proven single-item path the old page used, extended to the cart.)
-  fetch('https://email-capture.calitoy.workers.dev', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      type: 'checkout',
-      priceId: items[0],
-      productName: state.cart.map(it => `${it.design.name} ${it.attire.name} (${it.size}) x${it.qty}`).join('; '),
-      metadata: { artist: 'jeremy_dean', fulfiller: 'printful', items: items.join(','),
-                  cart: state.cart.map(it => `${it.design.id}:${it.attire.id}:${it.size}x${it.qty}`).join(';') }
-    }),
-  }).then(r => r.json()).then(data => {
-    if (data.url) window.location.href = data.url;
-    else { alert('Checkout error' + (data.error ? ': ' + data.error : '')); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; }
-  }).catch(() => { alert('Network error'); btn.textContent = 'Buy Now — Secure Checkout'; btn.disabled = false; });
 }
 
 // Progress rail + step switching
@@ -484,6 +503,8 @@ function goStep(n) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+document.getElementById('design-count').textContent = DESIGNS.length;
+document.getElementById('product-count').textContent = Object.keys(PRICES).length;
 renderDesigns();
 </script>
 
